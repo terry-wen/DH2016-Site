@@ -39,34 +39,62 @@
                /_|.-'\ ,".             '.'`__'-( \
                  / ,"'"\,'               `/  `-.|" -->
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/peak.css">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <div class="title">
-        <div class="row">
-        <div class="col-xs-4"><h1 id='r'>DESERT</h1></div>
-        <div class="col-xs-4"><img class="logo" src="./assets/LightBulbSketch1.png" /></div>
-        <div class="col-xs-4"><h1 id='l'>HACKS</h1></div>
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/peak.css">
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            #mc_embed_signup {
+                clear:left; 
+                width:100%;
+            }
+            #mc_embed_signup input.email {
+                height: 48px;
+                width: 300px;
+            }
+            #mc_embed_signup .button {
+                height: 48px;
+                background-color: rgb(148, 201, 237);
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <div id="interface">
+            <div class="title">
+                <div class="row">
+                    <div class="col-xs-4"><h1 id='r'>DESERT</h1></div>
+                    <div class="col-xs-4"><img class="logo" src="./assets/LightBulbSketch1.png" /></div>
+                    <div class="col-xs-4"><h1 id='l'>HACKS</h1></div>
+                </div>
             </div>
-    </div>
-      <div class="title-sm">
-        <img src="./assets/sunDraft.png" />
-        <h1>DESERT<br>HACKS</h1>
-      </div>
-    <div class="signup">
-    <h2>Coming to Arizona</h2>
-    <h2>Fall 2016</h2>
-        <div id="subscribe">
-          <input id="emailBox" name="email" type="email" placeholder="your@email.com" onfocus="this.placeholder= ''" onblur="this.placeholder = 'your@email.com'" required="">
+            <div class="title-sm">
+                <h1>DESERT<br>HACKS</h1>
+            </div>
+            <div class="signup">
+                <h2>Coming to Arizona</h2>
+                <h2>Fall 2016</h2>
+                <!-- Begin MailChimp Signup Form -->
+                <div id="mc_embed_signup">
+                    <form action="//deserthacks.us13.list-manage.com/subscribe/post?u=178b78da869e5fb3c5cb38d87&amp;id=f8ec77d730" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email" required>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_178b78da869e5fb3c5cb38d87_f8ec77d730" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        </div>
+                    </form>
+                </div>
+                <!--End mc_embed_signup-->
+                <div id="sponsors">
+                    <p> Interested in Sponsoring? Email us at <a href="mailto:sponsor@deserthacks.org"> sponsor@deserthacks.org</a>!</p>
+                </div>
+                <!-- p> Made with &hearts; by the Desert Hacks Team</p -->
+            </div>
         </div>
-        <div id="sponsors">
-            <button id="SubmitButton" type="submit" class="btn" onclick="submitAction()">Sponsor Us!</button>
-        </div>
-    </div>
-  </body>
+    </body>
+    <script src="../BitParticle.js"></script>
 </html>

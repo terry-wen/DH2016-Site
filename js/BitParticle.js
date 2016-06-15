@@ -106,18 +106,18 @@ context.translate(this.x,this.y);
 context.rotate(this.angle);
 
 if(this.type2 === 0){
-	  drawTriangle(context,0,0,15,13,"#FC63B3");
+	  drawTriangle(context,0,0,15,13,"#ACBF66");
 }else if(this.type2 === 1){
-	  drawCircle(context,0,0,8,"#FFF48D");
+	  drawCircle(context,0,0,8,"#FFE499");
 
 }else if(this.type2 === 2){
 context.beginPath();
 context.rect(0,0,13,13);
 context.closePath();
-context.strokeStyle = "#94FFF5";
+context.strokeStyle = "#94C9ED";
 context.stroke();
 }else if(this.type2 === 3){
-	  drawCross(context,"#D68FFF");
+	  drawCross(context,"#EBC5A6");
 
 }
 	  

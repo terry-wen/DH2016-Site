@@ -94,6 +94,10 @@ h2 {
   .title-sm {
     display: block
   }
+
+  #mc_embed_signup .button {
+    width: 40%;
+            }
 }
 
 canvas{

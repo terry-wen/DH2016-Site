@@ -2,18 +2,9 @@ var canvas = document.getElementById("canvas");
 var context = canvas.getContext('2d');
 var W = canvas.width = window.innerWidth;
 var H = canvas.height = window.innerHeight;
-var generatorStock=[];
-var generator1 = new particleGenerator(0, H+2,W, 0,30);
-var mouse = {
-	x: 0, y: 0
-};
+var generator = new particleGenerator(0, H, W, 0, 30);
 
-function loadImage(url) {
-    var img = document.createElement("img");
-    img.src = url;
-    return img;
-}
-
+//draw triangle shape
 function drawTriangle(context, x, y, triangleWidth, triangleHeight, fillStyle) {
 	context.save();
 	context.translate(0,-triangleHeight/2);
@@ -27,7 +18,8 @@ function drawTriangle(context, x, y, triangleWidth, triangleHeight, fillStyle) {
 	context.stroke();
 }
 
-function drawCircle(context, x, y, radius, fillStyle){
+//draw circle shape
+function drawCircle(context, x, y, radius, fillStyle) {
 	context.beginPath();
 	context.arc(x,y,radius,0,2*Math.PI);
 	context.closePath();
@@ -35,39 +27,39 @@ function drawCircle(context, x, y, radius, fillStyle){
 	context.stroke();
 }
 
-function drawCross(context,fillStyle){
+//draw rectangle shape
+function drawRect(context, x, y, width, height, fillStyle) {
 	context.beginPath();
-	context.moveTo(0, 0);
-	context.lineTo(0, 10);
-	context.moveTo(-6, 5);
-	context.lineTo(6,5 );
+	context.rect(x,y,width,height);
 	context.closePath();
 	context.strokeStyle = fillStyle;
 	context.stroke();
 }
 
+//returns random int
 function randomIntgf(min, max) {
 	return Math.floor(min + Math.random() * (max - min + 1));
 }
 
+//returns random int w/out rounding
 function randomInt(min, max) {
 	return min + Math.random() * (max - min);
 }
 
+//sets value to be between min or max
 function clamp(value, min, max) {
 	return Math.min(Math.max(value, Math.min(min, max)), Math.max(min, max));
 }
 
-function particle(x, y, type) {
+function particle(x, y) {
   this.radius = randomInt(.1, 3);
 	this.angleturn = randomInt(-.08, .08);
 	this.angle = randomInt(1,0);
-	this.type2 = randomIntgf(0,2);
+	this.type = randomIntgf(0,2);
 	this.x = x;
 	this.y = y;
 	this.vx = randomInt(-4, 4);
 	this.vy = randomInt(-2, 0);
-	this.type=type;
 }
 
 particle.prototype.update = function() {
@@ -79,9 +71,7 @@ particle.prototype.update = function() {
 	this.angle += this.angleturn;
 	this.radius -= .01;
 	context.beginPath();
-	context.font = "30px arial";
 	context.textAlign = "center";
-	//	context.globalAlpha=1;
 	context.globalAlpha = this.radius;
 	context.lineWidth = 2;
   context.lineCap = 'round';
@@ -89,16 +79,12 @@ particle.prototype.update = function() {
 	context.translate(this.x,this.y);
 	context.rotate(this.angle);
 
-	if(this.type2 === 0) {
+	if(this.type === 0) {
 	  drawTriangle(context,0,0,15,13,"#ACBF66");
-	} else if(this.type2 === 1) {
+	} else if(this.type === 1) {
 	  drawCircle(context,0,0,8,"#FFE499");
-	} else if(this.type2 === 2) {
-		context.beginPath();
-		context.rect(0,0,13,13);
-		context.closePath();
-		context.strokeStyle = "#94C9ED";
-		context.stroke();
+	} else if(this.type === 2) {
+		drawRect(context,0,0,13,13,"#94C9ED");
 	}
 
 	context.restore();
@@ -111,39 +97,25 @@ particle.prototype.update = function() {
   }
 }
 
-function particleGenerator(x, y, w, h, number,text) {
-  // particle will spawn in this area
+function particleGenerator(x, y, w, h, number) {
   this.x = x;
   this.y = y;
   this.w = w;
   this.h = h;
   this.number = number;
   this.particles = [];
-	this.text=text;
 }
 
 function update() {
-  // context.globalAlpha=.5;
   context.clearRect(0,0,W,H);
-  generator1.animate();
+  generator.animate();
 	requestAnimationFrame(update);
 }
 
-canvas.addEventListener('mousemove', function(e) {
-	mouse.x = e.pageX - this.offsetLeft;
-	mouse.y = e.pageY - this.offsetTop;
-}, false);
-
 particleGenerator.prototype.animate = function() {
-  context.fillStyle="grey";
-  context.beginPath();
-  context.strokeRect(this.x, this.y, this.w, this.h);
-	context.font = "13px arial";
-	context.textAlign = "center";
-	context.closePath();
 	if (this.particles.length < this.number) {
 	  this.particles.push(new particle(clamp(randomInt(this.x, this.w+this.x),this.x,this.w+this.x),
-		clamp(randomInt(this.y,this.h+this.y),this.y,this.h+this.y),this.text));
+		clamp(randomInt(this.y,this.h+this.y),this.y,this.h+this.y)));
 	}
 	for (var i = 0; i < this.particles.length; i++) {
 	  p = this.particles[i];
@@ -151,9 +123,21 @@ particleGenerator.prototype.animate = function() {
 	  if (p.radius < .01 || p.y <0) {
 			//a brand new particle replacing the dead one
 	  	this.particles[i] = new particle(clamp(randomInt(this.x, this.w+this.x),this.x,this.w+this.x),
-			clamp(randomInt(this.y,this.h+this.y),this.y,this.h+this.y),this.text);
+			clamp(randomInt(this.y,this.h+this.y),this.y,this.h+this.y));
 	  }
 	}
 }
+
+particleGenerator.prototype.updateWindow = function() {
+	this.y = window.innerHeight;
+	this.w = window.innerWidth;
+	this.particles = [];
+}
+
+window.addEventListener("resize", function() {
+	W = canvas.width = window.innerWidth;
+	H = canvas.height = window.innerHeight;
+	generator.updateWindow();
+});
 
 update();

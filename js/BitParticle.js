@@ -58,11 +58,11 @@ function clamp(value, min, max) {
 	return Math.min(Math.max(value, Math.min(min, max)), Math.max(min, max));
 }
 
-function particle(x, y,type) {
+function particle(x, y, type) {
   this.radius = randomInt(.1, 3);
 	this.angleturn = randomInt(-.08, .08);
 	this.angle = randomInt(1,0);
-	this.type2 = randomIntgf(0,3);
+	this.type2 = randomIntgf(0,2);
 	this.x = x;
 	this.y = y;
 	this.vx = randomInt(-4, 4);
@@ -99,8 +99,6 @@ particle.prototype.update = function() {
 		context.closePath();
 		context.strokeStyle = "#94C9ED";
 		context.stroke();
-	} else if(this.type2 === 3) {
-	  drawCross(context,"#EBC5A6");
 	}
 
 	context.restore();

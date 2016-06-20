@@ -169,12 +169,4 @@ canvas{
   .title .col-xs-4 {
     padding: 0 3px;
   }
-
-  #mc_embed_signup .button {
-    width: 100%;
-  }
-
-  #mc_embed_signup input.email {
-    width: 100%;
-  }
 }

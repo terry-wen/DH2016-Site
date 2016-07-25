@@ -1,19 +1,23 @@
 @font-face {
 	font-family: "Axis";
-	src: url("./fonts/Axis Extrabold.otf");
+	src: url("../fonts/Axis Extrabold.otf");
 	font-weight: 800;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Moderne Sans";
-	src: url("./fonts/MODERNE SANS.ttf");
+	src: url("../fonts/MODERNE SANS.ttf");
 	font-weight: 400;
 	font-style: normal;
 }
 
+h1 {
+	font-family: "Moderne Sans", sans-serif;
+}
+
 .navbar {
-	padding: 15px 0;
+	padding: 10px 0;
 	background-color: transparent;
 	-webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
 	-moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -24,11 +28,11 @@
 .nav-link {
   font-size: 18px;
   color: rgb(153, 205, 118);
-  -webkit-transition: border .2s ease-in-out;
-	-moz-transition: border .2s ease-in-out;
-	transition: border .2s ease-in-out;
-  padding-bottom: 10px !important;
-  border-bottom: 5px solid transparent;
+  -webkit-transition: border .2s ease-in-out, color .2s ease-in-out, padding .2s ease-in-out;
+	-moz-transition: border .2s ease-in-out, color .2s ease-in-out, padding .2s ease-in-out;
+	transition: border .2s ease-in-out, color .2s ease-in-out, padding .2s ease-in-out;
+	padding-top: 20px !important;
+  padding-bottom: 20px !important;
 }
 
 ul.nav a {
@@ -52,6 +56,7 @@ ul.nav a:active {
 
 ul.nav a.active {
   color: rgb(112, 190, 113);
+	padding-bottom: 15px !important;
   border-bottom: 5px solid rgb(112, 190, 113);
 }
 
@@ -64,6 +69,7 @@ ul.nav a.active {
 .navbar-brand {
   font-family: "Axis", sans-serif;
   font-size: 24px;
+	padding: 20px 15px;
 }
 
 .header {
@@ -86,6 +92,7 @@ ul.nav a.active {
 
 body {
 	font-family: "Raleway", sans-serif;
+	text-align: center;
 }
 
 section {
@@ -183,11 +190,11 @@ lets not worry about good practice for now :^) heh we can clean it up later*/
 }
 
 #faq {
-	background-color: rgb(250, 210, 120);
+	background-color: rgb(238, 55, 91);
 }
 
 #sponsors {
-  background-color: rgb(238, 55, 91);
+  background-color: white;
 }
 
 #contact {
@@ -196,6 +203,23 @@ lets not worry about good practice for now :^) heh we can clean it up later*/
 
 footer {
 	background-color: rgb(153, 65, 51);
+	height: 300px;
+	color: white;
+	font-size: 16px;
+}
+
+.footer {
+	padding-top: 120px;
+}
+
+.social {
+	padding-bottom: 20px;
+}
+
+.social a i {
+	color: white;
+	font-size: 60px;
+	margin: 10px;
 }
 
 #interface{

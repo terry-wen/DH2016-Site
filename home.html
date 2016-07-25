@@ -43,9 +43,10 @@
         <title>Desert Hacks 2016</title>
         <meta name="description" content="Desert Hacks: Where &quot;Dream It. Do It.&quot; Happens. Coming to Arizona this Fall 2016.">
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="./css/peak.css">
-        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link rel="icon" type="image/png" href="assets/favicon.ico">
+    		<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    		<link href="css/main.css" rel="stylesheet" type="text/css">
         <!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script -->
         <!-- script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script -->
 
@@ -95,37 +96,71 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
       </head>
-    <body>
-        <canvas id="canvas"></canvas>
-        <div id="interface">
-            <div class="title">
-                <div class="row">
-                    <div class="col-xs-4"><h1 id='r'>DESERT</h1></div>
-                    <div class="col-xs-4"><img class="logo floating" src="./assets/LightBulbSketch1.png" /></div>
-                    <div class="col-xs-4"><h1 id='l'>HACKS</h1></div>
-                </div>
-            </div>
-            <div class="signup">
-                <h2>Coming to Arizona</h2>
-                <h2>Fall 2016</h2>
-                <!-- Begin MailChimp Signup Form -->
-                <div id="mc_embed_signup">
-                    <form action="//deserthacks.us10.list-manage.com/subscribe/post?u=cc275e58f2abf61ab222695d2&amp;id=c5cb9b413f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email" required>
-                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cc275e58f2abf61ab222695d2_c5cb9b413f" tabindex="-1" value=""></div>
-                            <div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                        </div>
-                    </form>
-                </div>
-                <!--End mc_embed_signup-->
-                <div id="sponsors">
-                    <p> Interested in sponsoring? Email us at <a href="mailto:sponsor@deserthacks.org"> sponsor@deserthacks.org</a>!</p>
-                </div>
-                <!-- p> Made with &hearts; by the Desert Hacks Team</p -->
-            </div>
+    <body id="page-top">
+      <nav class = "navbar navbar-fixed-top">
+        <div class = "container">
+    			<div class "navbar-header page-scroll">
+    				<a class = "navbar-brand page-scroll" href ="#page-top"><span style="color: rgb(152, 64, 51);">Desert</span> <span style="color: rgb(153, 205, 118);">Hacks</span></a>
+    			</div>
+    			<ul class = "nav navbar-nav">
+    				<li class = "nav-item"><a class = "nav-link page-scroll" href = "#about">about</a></li>
+    				<li class = "nav-item"><a class = "nav-link page-scroll" href = "#schedule">schedule</a></li>
+    				<li class = "nav-item"><a class = "nav-link page-scroll" href = "#faq">faq</a></li>
+    				<li class = "nav-item"><a class = "nav-link page-scroll" href = "#sponsors">sponsors</a></li>
+    				<li class = "nav-item"><a class = "nav-link page-scroll" href = "#contact">contact</a></li>
+    			</ul>
         </div>
+  		</nav>
+  		<!--Add collapsible/mobile navbar here-->
+  		<section id = "home">
+  			<div class = "container header">
+  				<div class = "title">
+  					<h1><span style="color: rgb(152, 64, 51);">Desert</span> <span style="color: rgb(153, 205, 118);">Hacks</span></h1>
+  					<h2>Fall 2016 | Phoenix, Arizona</h2>
+  				</div>
+  				<div id="mc_embed_signup">
+  					<p>Join our mailing list!</p>
+  					<form action="//deserthacks.us10.list-manage.com/subscribe/post?u=cc275e58f2abf61ab222695d2&amp;id=c5cb9b413f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+  						<div id="mc_embed_signup_scroll">
+  							<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email" required="">
+  							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+  							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cc275e58f2abf61ab222695d2_c5cb9b413f" tabindex="-1" value=""></div>
+  							<div class="clear"><input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+  						</div>
+  					</form>
+  				</div>
+  			</div>
+  		</section>
+
+  		<section id = "about">
+
+  		</section>
+
+  		<section id = "schedule">
+
+  		</section>
+
+  		<section id = "faq">
+
+  		</section>
+
+  		<section id = "sponsors">
+
+  		</section>
+
+  		<section id = "contact">
+
+  		</section>
     </body>
+    <footer>
+  		<div class = "container">
+  			<div class = "social-icon facebook"></div>
+  			<div class = "social-icon twitter"></div>
+  			<div class = "social-icon mail"></div>
+  		</div>
+  	</footer>
+  	<script src="js/jquery.min.js"></script>
+  	<script src="js/jquery.easing.min.js"></script>
+  	<script src="js/my.js"></script>
     <script src="js/BitParticle.js"></script>
 </html>

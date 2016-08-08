@@ -98,7 +98,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
       </head>
     <body id="page-top">
-      <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2017/events?utm_source=na-2017&amp;utm_medium=TrustBadge&amp;utm_campaign=na-2017&amp;utm_content=gray" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2017/gray.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
       <nav class = "navbar navbar-fixed-top">
         <div class = "container">
     			<div class "navbar-header page-scroll">
@@ -113,9 +112,13 @@
     			</ul>
         </div>
   		</nav>
+        <!-- does it have to be "right: 50px"? bc i changed it to 15px so that it takes up less room-->
+        <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:15px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2017/events?utm_source=na-2017&amp;utm_medium=TrustBadge&amp;utm_campaign=na-2017&amp;utm_content=gray" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2017/gray.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
   		<!--Add collapsible/mobile navbar here-->
   		<section id = "home">
   			<div class = "container header">
+
+                <img src = "assets/DH-logo.png">
   				<div class = "title">
   					<h1><span style="color: rgb(152, 64, 51);">Desert</span> <span style="color: rgb(153, 205, 118);">Hacks</span></h1>
   					<h2>Fall 2016 | Phoenix, Arizona</h2>
@@ -136,40 +139,89 @@
 
   		<section id = "about">
         <div class = "container">
-          <h1>about us</h1>
-          <p>Desert Hacks was founded at Arizona State University with the goal of building a collaborative and innovative community without boundaries. This year, Desert Hacks will be welcoming students
+            <div class = "section-header">
+                <h1 class = "about-header">about us</h1>
+            </div>
+          <p class = "plain">Desert Hacks was founded at Arizona State University with the goal of building a collaborative and innovative community without boundaries. This year, Desert Hacks will be welcoming students
             from around the country to participate in a weekend of learning new concepts, building new projects, meeting new people, and being a part of a new, exciting experience. Whether you're a beginner or an expert,
             a web developer or a hardware enthusiast, you have a place in the community here at Desert Hacks.</p>
-          <p>We will be inviting [sic] undergraduate students to join us here in Phoenix, Arizona for the first iteration of our 36-hour hackathon on [date]. Join us for the chance to connect with mentors,
+          <p class = "plain">We will be inviting [sic] undergraduate students to join us here in Phoenix, Arizona for the first iteration of our 36-hour hackathon on [date]. Join us for the chance to connect with mentors,
             attend hands-on workshops, work with cutting-edge technology, and have a great time!</p>
         </div>
   		</section>
 
   		<section id = "schedule">
         <div class = "container">
-          <h1>event schedule</h1>
-          <p>We are derpy.</p>
+            <div class = "section-header">
+                <h1 class = "schedule-header">event schedule</h1>
+            </div>
+            <img src = "assets/Cactus2.png">
+            <img src = "assets/Cactus.png">
+            <img src = "assets/CactusWithFlower.png">
+
+          <p class = "plain">We are derpy.</p>
         </div>
   		</section>
 
-  		<section id = "faq">
+  		<section id = "faq" class = "faq">
         <div class = "container">
-          <h1>frequently asked questions</h1>
-          <p>We are derpy.</p>
+            <div class = "section-header">
+                <h1 class = "faq-header">frequently asked questions</h1>
+            </div>
+            <div class="row">
+              <div class="faq-col">
+                <div>
+                    <h3>Lorem ipsum dolor sit amet?</h3>
+                    <p>Maecenas porttitor risus risus, id venenatis tellus pretium quis. Aliquam eu faucibus ipsum, nec varius sem. Integer porttitor at elit eu condimentum. Phasellus sodales ligula vel magna porttitor, id sagittis lectus blandit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis gravida ante quis efficitur accumsan. Morbi sed est quam.</p>
+                </div>
+                <div>
+                    <h3>Fusce sit amet lectus vel mi gravida tempor?</h3>
+                    <p>Donec imperdiet ex eu sapien tristique, id consectetur dolor rhoncus. </p>
+                </div>
+              </div>
+              <div class="faq-col">
+                <div>
+                    <h3>Proin dignissim quam metus?</h3>
+                    <p>Duis ultrices, odio id convallis vestibulum, tortor enim cursus purus, id gravida tellus sem at turpis. Mauris tincidunt dapibus faucibus.</p>
+                </div>
+                <div>
+                    <h3>Donec sagittis laoreet lorem sit amet egestas.?</h3>
+                    <p>Ut malesuada viverra urna nec egestas. Etiam pellentesque maximus viverra. Praesent et dolor euismod, volutpat nibh et, tempor lacus. Maecenas congue ex non elit faucibus fermentum quis at eros. Aliquam dolor turpis, ultrices vitae consequat sed, mattis quis diam. Curabitur auctor ligula nisl, nec ornare lacus ullamcorper et. Aliquam tristique urna ac vehicula euismod. Aenean fermentum tempus libero at sodales.</p>
+                </div>
+              </div>
+              <div class="faq-col">
+                <div>
+                    <h3>Cras auctor vehicula lacinia?</h3>
+                    <p>Curabitur placerat gravida nisl in scelerisque. Curabitur luctus turpis ut lectus convallis, et vulputate tortor hendrerit. Proin posuere maximus ornare. Mauris dignissim ipsum a laoreet vulputate. Suspendisse pretium libero sodales dolor lobortis luctus.</p>
+                </div>
+                <div>
+                    <h3>Donec neque risus?</h3>
+                    <p>Etiam non scelerisque velit. Aenean eget tellus consequat, viverra massa eget, pellentesque orci.</p>
+                </div>
+                <div>
+                    <h3>Donec neque risus?</h3>
+                    <p>Etiam non scelerisque velit. Aenean eget tellus consequat, viverra massa eget, pellentesque orci.</p>
+                </div>
+              </div>
+            </div>
         </div>
   		</section>
 
   		<section id = "sponsors">
         <div class = "container">
-          <h1>our sponsors</h1>
-          <p>no</p>
+            <div class = "section-header">
+                <h1 class = "sponsors-header">our sponsors</h1>
+            </div>
+          <p class = "plain">no</p>
         </div>
   		</section>
 
   		<section id = "contact">
         <div class = "container">
-          <h1>contact us</h1>
-          <p>We are derpy.</p>
+            <div class = "section-header">
+                <h1 class = "contact-header">contact us</h1>
+            </div>
+          <p class = "plain">We are derpy.</p>
         </div>
   		</section>
     </body>

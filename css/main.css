@@ -15,13 +15,22 @@
 section h1 {
 	font-family: "Moderne Sans", sans-serif;
 	font-size: 40px;
-	padding-bottom: 20px;
+	margin-bottom: 20px;
 }
 
-section p {
-	font-size: 24px;
-	padding: 20px 100px;
+section p.plain {
+	font-size: 1.4em;
+	padding: 20px 75px;
 	text-align: justify;
+}
+
+p {
+	font-size: 14px;
+}
+
+section .container {
+	padding-right: 100px;
+	padding-left: 100px;
 }
 
 .navbar {
@@ -30,7 +39,7 @@ section p {
 	-webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
 	-moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
 	transition: background .5s ease-in-out,padding .5s ease-in-out;
-  border: none;
+  	border: none;
 }
 
 .nav-link {
@@ -102,6 +111,7 @@ ul.nav a.active {
 body {
 	font-family: "Raleway", sans-serif;
 	text-align: center;
+	background-color: #fff;
 }
 
 section {
@@ -114,6 +124,7 @@ section {
 
 .navbar-nav {
 	float:right;
+	margin-right: 80px;
 }
 
 /* MailChimp Form Embed Code - Horizontal Super Slim - 12/16/2015 v10.7
@@ -187,32 +198,95 @@ Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
 /*its bad habit to use id's in css, shud we give them all an
 identical class name? or is that excessive idk idk
 lets not worry about good practice for now :^) heh we can clean it up later*/
+
 #home {
 	background-color: rgb(215, 239, 251);
-	padding-top: calc(50vh - 95px); /*based on height of header*/
+	/*padding-top: calc(50vh - 95px); /*based on height of header*/
+}
+
+.header {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.section-header {
+	width: 100%;
+	text-align: left;
+}
+
+.section-header h1 {
+	color: #fff;
+	display: inline-block;
+	padding: 7px 20px 0 20px;
 }
 
 #about {
-	background-color: rgb(250, 210, 120);
+	/*background-color: rgb(250, 210, 120);*/
 	box-sizing: content-box;
 	height: max-content;
 	padding-bottom: 60px;
 }
 
+.about-header {
+	background-color: rgb(250, 210, 120);
+}
+
 #schedule {
-  background-color: rgb(99, 169, 179);
+  /*background-color: rgb(99, 169, 179);*/
+}
+
+.schedule-header {
+	background-color: rgb(99, 169, 179);
 }
 
 #faq {
+	/*background-color: rgb(238, 55, 91);*/
+}
+
+.faq-header {
 	background-color: rgb(238, 55, 91);
 }
 
+/*faq grid*/
+.faq .row {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.faq-col {
+  width: 33.333%;
+  float: left;
+  text-align: justify;
+}
+
+.faq-col div {
+	padding: 10px;
+	margin: 15px;
+	/*background-color: #E7E7E7;*/
+}
+
+.faq-col h3 {
+	padding: 0;
+	margin: 0 0 15px 0;
+}
+
+
 #sponsors {
-  background-color: white;
+  /*background-color: white;*/
+}
+
+.sponsors-header {
+	background-color: black;
 }
 
 #contact {
-  background-color: rgb(250, 210, 120);
+  /*background-color: rgb(250, 210, 120);*/
+}
+
+.contact-header {
+	background-color: rgb(250, 210, 120);
 }
 
 footer {

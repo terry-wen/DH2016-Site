@@ -56,6 +56,22 @@ p {
 	}
 }
 
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:active {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: rgb(153, 205, 118);
+	/*I kind of like the default grey already.*/
+}
+
 .navbar {
 	padding: 10px 0;
 	background-color: transparent;
@@ -523,10 +539,10 @@ footer {
 }
 
 .floating {
-	animation-name: Floating;
+	/*animation-name: Floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;*/
 }
 
 @keyframes Floating {

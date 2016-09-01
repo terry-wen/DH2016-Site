@@ -365,6 +365,10 @@ lets not worry about good practice for now :^) heh we can clean it up later*/
 	font-size: 18px;
 }
 
+#schedule h2 span {
+	float: right;
+}
+
 .schedule-header {
 	background-color: rgb(99, 169, 179);
 }
@@ -387,6 +391,18 @@ lets not worry about good practice for now :^) heh we can clean it up later*/
   width: 33.333%;
   float: left;
   text-align: left;
+}
+
+#schedule .row {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.sched-col {
+	width: 50%;
+	float: left;
+	text-align: left;
+	padding: 0 40px 20px 40px;
 }
 
 .faq-col div {

@@ -449,6 +449,16 @@ span.plus {
 		width: 100%;
 	}
 
+	.sched-col {
+		width: 100%;
+		padding: 0 20px 20px 20px;
+	}
+
+
+	#schedule h2 {
+		font-size: 14px;
+	}
+
 	.faq-col div {
 		padding: 5px 10px;
 		margin: 0 15px;

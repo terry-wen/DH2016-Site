@@ -275,6 +275,14 @@ Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
 		margin-top: 5px;
 		width: 300px;
 	}
+
+	.navbar-brand {
+		display: none;
+	}
+
+	.top-nav-collapse {
+		background: transparent;
+	}
 }
 
 /*its bad habit to use id's in css, shud we give them all an

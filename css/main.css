@@ -523,6 +523,21 @@ span.plus {
 	margin: 0 20px;
 }
 
+.logo-xl {
+	max-height: 150px;
+	max-width: 90%;
+}
+
+.logo-l {
+	max-height: 125px;
+	max-width: 30%;
+}
+
+.logo-s {
+	max-height: 70px;
+	max-width: 25%;
+}
+
 footer {
 	background-color: rgb(153, 65, 51);
 	height: 300px;

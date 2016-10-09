@@ -180,7 +180,7 @@ body {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-image: url('../assets/bg-noclouds.png');
-	background-size: cover;
+	background-size: 100% auto;
 }
 
 section {

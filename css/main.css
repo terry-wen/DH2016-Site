@@ -190,6 +190,15 @@ section {
 	padding-top: 60px;
 }
 
+.apply {
+	height: 0;
+	-webkit-transition: height 1.5s ease;
+	-moz-transition: height 1.5s ease;
+	-ms-transition: height 1.5s ease;
+	-o-transition: height 1.5s ease;
+	transition: height 1.5s ease;
+}
+
 .navbar-nav {
 	float: right;
 	margin-right: 80px;
@@ -264,6 +273,32 @@ Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
 
 #mc_embed_signup .button:hover {
   background-color: rgb(152, 64, 51);
+  cursor: pointer;
+}
+
+.apply-button {
+	outline: none;
+  font-size: 13px;
+  border: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  letter-spacing: .03em;
+  color: #fff;
+  background-color: rgb(153, 205, 118);
+  box-sizing: border-box;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 18px;
+  display: inline-block;
+  margin: 0;
+  transition: all 0.23s ease-in-out 0s;
+}
+
+.apply-button:hover {
+	background-color: rgb(152, 64, 51);
+	color: #fff;
+	text-decoration: none;
   cursor: pointer;
 }
 

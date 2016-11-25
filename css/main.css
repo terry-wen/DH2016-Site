@@ -216,7 +216,7 @@ section {
 
 /* MailChimp Form Embed Code - Horizontal Super Slim - 12/16/2015 v10.7
 Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
-
+/*
 #mc_embed_signup form {
   text-align: center;
   padding: 10px 0 10px 0;
@@ -275,10 +275,16 @@ Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
   background-color: rgb(152, 64, 51);
   cursor: pointer;
 }
+*/
+a.dh-button:link {
+    color: white;
+    text-decoration: none;
+}
 
-.apply-button {
-	outline: none;
-  font-size: 13px;
+.dh-button {
+  outline: none;
+  width: 192px;
+  font-size: 19px;
   border: none;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -289,16 +295,15 @@ Adapted from: http://blog.heyimcat.com/universal-signup-form/ */
   box-sizing: border-box;
   height: 48px;
   line-height: 48px;
-  padding: 0 18px;
   display: inline-block;
-  margin: 0;
+  margin: 10px 15px 0 0;
   transition: all 0.23s ease-in-out 0s;
 }
 
-.apply-button:hover {
-	background-color: rgb(152, 64, 51);
-	color: #fff;
-	text-decoration: none;
+.dh-button:hover {
+  background-color: rgb(152, 64, 51);
+  color: #fff;
+  text-decoration: none;
   cursor: pointer;
 }
 

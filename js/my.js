@@ -6,6 +6,38 @@ $(document).ready(function() {
     }
 });
 
+//volunteer button
+/*$('#volunteer').hover(
+    function() {
+        var $this = $(this); // caching $(this)
+        //$this.data('initialText', $this.text());
+        $this.text("COMING SOON").fadeIn();
+    },
+    function() {
+        var $this = $(this); // caching $(this)
+        $this.text("VOLUNTEER").fadeIn();
+    }
+);*/
+$('#volunteer').mouseenter(
+    function() {
+        var $this = $(this); // caching $(this)
+        $('#volunteerAnimate').fadeOut(200, function() {
+            $(this).text('COMING SOON').fadeIn(200);
+        });
+    }
+);
+
+$('#volunteer').mouseleave(
+    function() {
+        var $this = $(this); // caching $(this)
+        $('#volunteerAnimate').fadeOut(10, function() {
+            $(this).text('VOLUNTEER').fadeIn(10);
+        });
+    }
+);
+
+
+
 //jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 1 || $(window).width() < 768) {

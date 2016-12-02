@@ -51,7 +51,7 @@ $(window).scroll(function() {
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        var offset = ($(window).width() < 768) ? -50 : 50;
+        var offset = ($(window).width() < 768) ? -50 : -15;
         if($anchor.attr('href') == '#apply') {
           $('.apply').css({'height': '100vh'});
           offset = 0;

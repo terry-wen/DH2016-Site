@@ -551,31 +551,71 @@ span.plus {
   padding: 30px 0;
 }
 
-.sponsors-header {
-	background-color: #60B662;
-}
-
 .godaddy {
 	padding-bottom: 10px;
 }
 
-.logo {
-	margin: 0 20px;
+.sponsors-header {
+	background-color: #60B662;
 }
 
-.logo-xl {
+.sponsors {
+	text-align: center;
+	padding: 10px 10px;
+}
+
+img.logo {
+	margin-top: 30px;
+}
+
+
+.diamond .logo {
 	max-height: 150px;
-	max-width: 90%;
+	max-width: 500px;
 }
 
-.logo-l {
-	max-height: 125px;
-	max-width: 30%;
+.quartz .logo {
+	max-height: 120px;
+	max-width: 200px;
 }
 
-.logo-s {
+.pyrite .logo {
 	max-height: 70px;
-	max-width: 25%;
+	max-width: 175px;
+}
+
+@media(max-width: 776px) {
+	.diamond .logo {
+		max-height: 150px;
+		max-width: 400px;
+	}
+
+	.quartz .logo {
+		max-height: 120px;
+		max-width: 200px;
+	}
+
+	.pyrite .logo {
+		max-height: 70px;
+		max-width: 175px;
+	}
+}
+
+@media(max-width: 580px) {
+	.diamond .logo {
+		max-height: 150px;
+		max-width: 300px;
+	}
+
+	.quartz .logo {
+		max-height: 120px;
+		max-width: 120px;
+	}
+
+	.pyrite .logo {
+		max-height: 50px;
+		max-width: 120px;
+	}
 }
 
 footer {

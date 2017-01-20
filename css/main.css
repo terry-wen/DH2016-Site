@@ -574,12 +574,17 @@ img.logo {
 	max-width: 500px;
 }
 
-.quartz .logo {
+.turquoise .logo {
 	max-height: 120px;
 	max-width: 200px;
 }
 
 .pyrite .logo {
+	max-height: 120px;
+	max-width: 230px;
+}
+
+.clay .logo {
 	max-height: 70px;
 	max-width: 175px;
 }
@@ -590,12 +595,17 @@ img.logo {
 		max-width: 400px;
 	}
 
-	.quartz .logo {
+	.turquoise .logo {
 		max-height: 120px;
 		max-width: 200px;
 	}
 
 	.pyrite .logo {
+		max-height: 100px;
+		max-width: 200px;
+	}
+
+	.clay .logo {
 		max-height: 70px;
 		max-width: 175px;
 	}
@@ -607,12 +617,17 @@ img.logo {
 		max-width: 300px;
 	}
 
-	.quartz .logo {
+	.turquoise .logo {
 		max-height: 120px;
 		max-width: 120px;
 	}
 
 	.pyrite .logo {
+		max-height: 75px;
+		max-width: 150px;
+	}
+
+	.clay .logo {
 		max-height: 50px;
 		max-width: 120px;
 	}

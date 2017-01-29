@@ -589,6 +589,7 @@ img.logo {
 	max-width: 175px;
 }
 
+
 @media(max-width: 776px) {
 	.diamond .logo {
 		max-height: 150px;

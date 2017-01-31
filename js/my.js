@@ -18,7 +18,7 @@ $(document).ready(function() {
         $this.text("VOLUNTEER").fadeIn();
     }
 );*/
-$('#volunteer').mouseenter(
+/*$('#volunteer').mouseenter(
     function() {
         var $this = $(this); // caching $(this)
         $('#volunteerAnimate').fadeOut(200, function() {
@@ -34,7 +34,7 @@ $('#volunteer').mouseleave(
             $(this).text('VOLUNTEER').fadeIn(10);
         });
     }
-);
+);*/
 
 
 

@@ -547,9 +547,11 @@ span.plus {
 	padding-bottom: 200px;
 }
 
-.section-content {
-  padding: 30px 0;
+#sponsors .section-content {
+	padding-top: 30px;
+	padding-bottom: 5px;
 }
+
 
 .godaddy {
 	padding-bottom: 10px;
@@ -580,13 +582,13 @@ img.logo {
 }
 
 .pyrite .logo {
-	max-height: 120px;
-	max-width: 230px;
+	max-height: 70px;
+	max-width: 200px;
 }
 
 .clay .logo {
 	max-height: 70px;
-	max-width: 175px;
+	max-width: 200px;
 }
 
 
@@ -602,13 +604,13 @@ img.logo {
 	}
 
 	.pyrite .logo {
-		max-height: 100px;
+		max-height: 70px;
 		max-width: 200px;
 	}
 
 	.clay .logo {
 		max-height: 70px;
-		max-width: 175px;
+		max-width: 200px;
 	}
 }
 
@@ -624,13 +626,13 @@ img.logo {
 	}
 
 	.pyrite .logo {
-		max-height: 75px;
+		max-height: 50px;
 		max-width: 150px;
 	}
 
 	.clay .logo {
 		max-height: 50px;
-		max-width: 120px;
+		max-width: 150px;
 	}
 }
 
@@ -765,4 +767,15 @@ footer {
   from {transform:translate(0, 0px);}
   55% {transform:translate(0, 17px);}
   to {transform: translate(0, -0px);}
+}
+
+.partners {
+	font-weight: bold;
+	font-size: 40px;
+	color: #60B662;
+}
+
+.sponsor-link {
+	padding-bottom: 0;
+	padding-top: 20px;
 }

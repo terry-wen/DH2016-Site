@@ -1,6 +1,7 @@
 $desert-brown: #994033;
 $hack-green: #99CD76;
 $off-white: #FAF8F3;
+$flor-red: rgb(238, 55, 91);
 $color-0: rgb(112, 190, 113);
 $color-1: rgb(100, 170, 180);
 
@@ -269,7 +270,7 @@ ul.nav a.active {
 }
 
 .mobile-nav {
-	background-color: white !important;
+	background-color: $off-white !important;
 
 	.navbar-nav {
 		float: none;
@@ -325,7 +326,7 @@ a.dh-button:link {
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	box-sizing: border-box;
-	color: white;
+	color: $off-white;
 	display: inline-block;
 	font-size: 19px;
 	height: 48px;
@@ -354,14 +355,12 @@ a.dh-button:link {
 //identical class name? or is that excessive idk idk
 //lets not worry about good practice for now :^) heh we can clean it up later
 
-#home {
+.home {
 	min-height: 100vh;
 	position: relative;
-	//background-color: rgb(215, 239, 251);
-	//padding-top: calc(50vh - 95px); /*based on height of header
 }
 
-#home .header {
+.home .header {
 	left: 50%;
 	position: absolute;
 	top: 50%;
@@ -369,8 +368,8 @@ a.dh-button:link {
 }
 
 .section-content {
-	padding-top: 20px;
 	background-color: $off-white; /*cream color*/
+	padding-top: 20px;
 }
 
 .section-header {
@@ -381,14 +380,14 @@ a.dh-button:link {
 		position: relative;
 		top: 40px;
 		left: -30px;
-		color: #fff;
+		color: $off-white;
 		display: inline-block;
-		padding: 7px 20px 0 20px;
+		padding: 7px 20px 0;
 	}
 }
 
 @media(max-width: 850px) {
-	#faq .section-header h1 {
+	.faq .section-header h1 {
 		left: 4%;
 	}
 
@@ -402,23 +401,22 @@ a.dh-button:link {
 		font-size: 24px;
 	}
 
-	#faq .section-header h1 {
+	.faq .section-header h1 {
 		width: 250px;
 	}
 
-	#faq {
-		padding-top: 80px
+	.faq {
+		padding-top: 80px;
 	}
 }
 
-#about {
-	/*background-color: rgb(250, 210, 120);*/
+.about {
 	box-sizing: content-box;
 	height: max-content;
 	padding-bottom: 60px;
 }
 
-#about p.plain {
+.about p.plain {
 	text-align: justify;
 }
 
@@ -426,15 +424,15 @@ a.dh-button:link {
 	background-color: rgb(250, 210, 120);
 }
 
-#schedule .section-content h1 {
+.schedule .section-content h1 {
   font-size: 24px;
 }
 
-#schedule h2 {
+.schedule h2 {
 	font-size: 18px;
 }
 
-#schedule h2 span {
+.schedule h2 span {
 	float: right;
 }
 
@@ -443,7 +441,7 @@ a.dh-button:link {
 }
 
 .faq-header {
-	background-color: rgb(238, 55, 91);
+	background-color: $flor-red;
 }
 
 //faq grid
@@ -453,9 +451,9 @@ a.dh-button:link {
 }
 
 .faq-col {
-	width: 33.333%;
 	float: left;
 	text-align: left;
+	width: 33.333%;
 
 	div {
 		margin: 15px;
@@ -472,24 +470,24 @@ a.dh-button:link {
 	}
 }
 
-#schedule .row {
-	max-width: 90%;
+.schedule .row {
 	margin: 0 auto;
+	max-width: 90%;
 }
 
 .sched-col {
-	width: 50%;
 	float: left;
+	padding: 0 40px 20px;
 	text-align: left;
-	padding: 0 40px 20px 40px;
+	width: 50%;
 }
 
 span.plus {
 	display: none;
-	font-size: 35px;
 	float: right;
+	font-size: 35px;
 	line-height: 15px;
-	transition: all 0.3s linear;
+	transition: all .3s linear;
 }
 
 .open {
@@ -514,18 +512,18 @@ span.plus {
 	}
 
 	.sched-col {
+		padding: 0 20px 20px;
 		width: 100%;
-		padding: 0 20px 20px 20px;
 	}
 
 
-	#schedule h2 {
+	.schedule h2 {
 		font-size: 14px;
 	}
 
 	.faq-col div {
-		padding: 5px 10px;
 		margin: 0 15px;
+		padding: 5px 10px;
 	}
 
 	.faq-col h3 {
@@ -538,25 +536,24 @@ span.plus {
 	}
 }
 
-#sponsors {
+.sponsors {
 	padding-bottom: 200px;
-}
 
-#sponsors .section-content {
-	padding-bottom: 5px;
-	padding-top: 30px;
+	.section-content {
+		padding-bottom: 5px;
+		padding-top: 30px;
+	}
 }
-
 
 .godaddy {
 	padding-bottom: 10px;
 }
 
 .sponsors-header {
-	background-color: #60B662;
+	background-color: $hack-green;
 }
 
-.sponsors {
+.sponsor-row {
 	padding: 10px;
 	text-align: center;
 }
@@ -647,11 +644,10 @@ img.logo {
 }
 
 footer {
-	background-color: rgb(153, 65, 51);
-	color: white;
+	background-color: $desert-brown;
+	color: $off-white;
 	font-size: 16px;
 	height: 300px;
-
 	z-index: 2;
 }
 
@@ -663,19 +659,10 @@ footer {
 	padding-bottom: 20px;
 
 	a i {
-		color: white;
+		color: $off-white;
 		font-size: 60px;
 		margin: 10px;
 	}
-}
-
-#interface{
-	box-sizing: border-box;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
 }
 
 .content-cactus {

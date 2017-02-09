@@ -1,4 +1,4 @@
-/* compiled by scssphp v0.6.6 on Thu, 02 Feb 2017 20:33:10 +0000 (0.3411s) */
+/* compiled by scssphp v0.6.6 on Thu, 02 Feb 2017 21:23:47 +0000 (0.4534s) */
 
 @font-face {
   font-family: 'Axis';
@@ -251,7 +251,7 @@ ul.nav a.active {
   font-family: "Moderne Sans", sans-serif; }
 
 .mobile-nav {
-  background-color: white !important; }
+  background-color: #faf8f3 !important; }
   .mobile-nav .navbar-nav {
     float: none; }
 
@@ -296,7 +296,7 @@ a.dh-button:link {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   box-sizing: border-box;
-  color: white;
+  color: #faf8f3;
   display: inline-block;
   font-size: 19px;
   height: 48px;
@@ -346,20 +346,20 @@ a.dh-button:link {
   text-align: left;
   padding: 0.5em 0; }
 
-#home {
+.home {
   min-height: 100vh;
   position: relative; }
 
-#home .header {
+.home .header {
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%); }
 
 .section-content {
-  padding-top: 20px;
   background-color: #faf8f3;
-  /*cream color*/ }
+  /*cream color*/
+  padding-top: 20px; }
 
 .section-header {
   width: 100%;
@@ -368,12 +368,12 @@ a.dh-button:link {
     position: relative;
     top: 40px;
     left: -30px;
-    color: #fff;
+    color: #faf8f3;
     display: inline-block;
-    padding: 7px 20px 0 20px; }
+    padding: 7px 20px 0; }
 
 @media (max-width: 850px) {
-  #faq .section-header h1 {
+  .faq .section-header h1 {
     left: 4%; }
 
   .cloud5 {
@@ -383,31 +383,30 @@ a.dh-button:link {
   .section-header h1 {
     font-size: 24px; }
 
-  #faq .section-header h1 {
+  .faq .section-header h1 {
     width: 250px; }
 
-  #faq {
+  .faq {
     padding-top: 80px; } }
 
-#about {
-  /*background-color: rgb(250, 210, 120);*/
+.about {
   box-sizing: content-box;
   height: max-content;
   padding-bottom: 60px; }
 
-#about p.plain {
+.about p.plain {
   text-align: justify; }
 
 .about-header {
   background-color: #fad278; }
 
-#schedule .section-content h1 {
+.schedule .section-content h1 {
   font-size: 24px; }
 
-#schedule h2 {
+.schedule h2 {
   font-size: 18px; }
 
-#schedule h2 span {
+.schedule h2 span {
   float: right; }
 
 .schedule-header {
@@ -421,9 +420,9 @@ a.dh-button:link {
   max-width: 100%; }
 
 .faq-col {
-  width: 33.333%;
   float: left;
-  text-align: left; }
+  text-align: left;
+  width: 33.333%; }
   .faq-col div {
     margin: 15px;
     padding: 10px; }
@@ -433,20 +432,20 @@ a.dh-button:link {
   .faq-col p {
     text-align: justify; }
 
-#schedule .row {
-  max-width: 90%;
-  margin: 0 auto; }
+.schedule .row {
+  margin: 0 auto;
+  max-width: 90%; }
 
 .sched-col {
-  width: 50%;
   float: left;
+  padding: 0 40px 20px;
   text-align: left;
-  padding: 0 40px 20px 40px; }
+  width: 50%; }
 
 span.plus {
   display: none;
-  font-size: 35px;
   float: right;
+  font-size: 35px;
   line-height: 15px;
   transition: all 0.3s linear; }
 
@@ -467,15 +466,15 @@ span.plus {
     width: 100%; }
 
   .sched-col {
-    width: 100%;
-    padding: 0 20px 20px 20px; }
+    padding: 0 20px 20px;
+    width: 100%; }
 
-  #schedule h2 {
+  .schedule h2 {
     font-size: 14px; }
 
   .faq-col div {
-    padding: 5px 10px;
-    margin: 0 15px; }
+    margin: 0 15px;
+    padding: 5px 10px; }
 
   .faq-col h3 {
     border-bottom: 1px solid #ddd;
@@ -484,10 +483,10 @@ span.plus {
   span.plus {
     display: inline; } }
 
-#sponsors {
+.sponsors {
   padding-bottom: 200px; }
 
-#sponsors .section-content {
+.sponsors .section-content {
   padding-bottom: 5px;
   padding-top: 30px; }
 
@@ -495,9 +494,9 @@ span.plus {
   padding-bottom: 10px; }
 
 .sponsors-header {
-  background-color: #60b662; }
+  background-color: #99cd76; }
 
-.sponsors {
+.sponsor-row {
   padding: 10px;
   text-align: center; }
 
@@ -567,8 +566,8 @@ img.logo {
     margin-bottom: 0; } }
 
 footer {
-  background-color: #994133;
-  color: white;
+  background-color: #994033;
+  color: #faf8f3;
   font-size: 16px;
   height: 300px;
   z-index: 2; }
@@ -579,7 +578,7 @@ footer {
 .social {
   padding-bottom: 20px; }
   .social a i {
-    color: white;
+    color: #faf8f3;
     font-size: 60px;
     margin: 10px; }
 

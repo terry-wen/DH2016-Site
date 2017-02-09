@@ -1,4 +1,4 @@
-/* compiled by scssphp v0.6.6 on Thu, 02 Feb 2017 21:23:47 +0000 (0.4534s) */
+/* compiled by scssphp v0.6.6 on Thu, 09 Feb 2017 07:41:32 +0000 (0.3384s) */
 
 @font-face {
   font-family: 'Axis';
@@ -485,10 +485,9 @@ span.plus {
 
 .sponsors {
   padding-bottom: 200px; }
-
-.sponsors .section-content {
-  padding-bottom: 5px;
-  padding-top: 30px; }
+  .sponsors .section-content {
+    padding-bottom: 5px;
+    padding-top: 30px; }
 
 .godaddy {
   padding-bottom: 10px; }
@@ -522,7 +521,8 @@ img.logo {
 .partners {
   color: #99cd76;
   font-size: 40px;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-top: 40px; }
 
 @media (max-width: 776px) {
   .diamond .logo {
@@ -581,14 +581,6 @@ footer {
     color: #faf8f3;
     font-size: 60px;
     margin: 10px; }
-
-#interface {
-  box-sizing: border-box;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%; }
 
 .content-cactus {
   float: right; }

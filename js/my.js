@@ -4,6 +4,7 @@ $(document).ready(function() {
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
     }
+    resizeMe();
 });
 
 //volunteer button
@@ -105,6 +106,7 @@ if($(window).width() < 768) {   //mobile
 }
 
 $( window ).resize(function() {
+  resizeMe();
     if($(window).width() < 768) {   //mobile
         $('.faq-col .answer').css('display', 'none');
         $('.faq-col .plus').css('display', 'inline-block');
@@ -124,3 +126,12 @@ $('.faq-col h3').on('click', function () {
 
     $(this).children('.plus').toggleClass('rotate');
 });
+
+
+/*live site configurations*/
+function resizeMe() {
+  if($(window).width()>=768){
+    $('.twitter').css('height',$(window).height()- $('.twitter').offset().top-35);
+    $('.schedule-table').css('height',$(window).height()- $('.schedule-table').offset().top-35);
+  }
+}

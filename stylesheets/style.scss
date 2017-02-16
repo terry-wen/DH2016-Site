@@ -1,0 +1,766 @@
+$desert-brown: #994033;
+$hack-green: #99CD76;
+$off-white: #FAF8F3;
+$flor-red: rgb(238, 55, 91);
+$color-0: rgb(112, 190, 113);
+$color-1: rgb(100, 170, 180);
+$dark-yellow: #F9D178;
+
+@mixin font-face($font-family, $file-path, $font-weight) {
+	@font-face {
+		font-family: $font-family;
+		src: url('../fonts/#{$file-path}');
+		font-weight: $font-weight;
+		font-style: normal;
+  }
+}
+
+@mixin cloud($duration, $height, $left, $top) {
+	animation-duration: $duration;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	height: $height;
+	left: $left;
+	position: fixed;
+	top: $top;
+	@content;
+}
+
+@mixin movement($distance) {
+	from {transform: translate(0, 0);}
+	55% {transform: translate(0, $distance);}
+	to {transform: translate(0, 0);}
+}
+
+@include font-face('Axis', 'Axis Extrabold.otf', 800);
+@include font-face('Moderne Sans', 'MODERNE SANS.ttf', 400);
+
+.cloud1 {
+	@include cloud(4s, 14vh, 5vw, 20vh) {
+		animation-name: Floating1;
+	}
+}
+
+.cloud2 {
+	@include cloud(3s, 15vh, 26vw, 45vh) {
+		animation-name: Floating2;
+	}
+}
+
+.cloud3 {
+	@include cloud(2s, 20vh, 67vw, 8vh) {
+		animation-name: Floating3;
+	}
+}
+
+.cloud4 {
+	@include cloud(2.5s, 15vh, 29vw, 10vh) {
+		animation-name: Floating4;
+	}
+}
+
+.cloud5 {
+	@include cloud(3.5s, 15vh, 81vw, 40vh) {
+		animation-name: Floating4;
+	}
+}
+
+@keyframes Floating1 {
+	@include movement(-20px);
+}
+
+@keyframes Floating2 {
+	@include movement(15px);
+}
+
+@keyframes Floating3 {
+	@include movement(10px);
+}
+
+@keyframes Floating4 {
+	@include movement(-12px);
+}
+
+@keyframes Floating5 {
+	@include movement(17px);
+}
+
+section {
+	box-sizing: border-box;
+	padding-top: 60px;
+	position: relative;
+	width: 100%;
+
+	h1 {
+		font-family: 'Moderne Sans', sans-serif;
+		font-size: 40px;
+		margin-bottom: 20px;
+	}
+}
+
+.plain {
+	font-size: 1.4em;
+	margin: 0;
+	padding: 20px 75px;
+	text-align: justify;
+}
+
+@media (max-width: 479px) {
+	.plain {
+		padding: 20px 40px;
+		text-align: center;
+	}
+}
+
+p {
+	font-size: 14px;
+}
+
+.mlh-trust-badge {
+	display: block;
+	max-width: 100px;
+	min-width: 60px;
+	position: fixed;
+	right: 50px;
+	top: 0;
+	width: 10%;
+	z-index: 10000;
+}
+
+@media (max-width: 767px) {
+	.mlh-trust-badge {
+		right: 75px;
+		transition: all .5s ease;
+	}
+
+	.divider {
+		display: none;
+	}
+
+	.line2::before {
+		content: '\A';
+		white-space: pre;
+	}
+
+	#mc_embed_signup .button {
+		margin-top: 5px;
+		width: 300px;
+	}
+
+	.section-header h1 {
+		left: 4%;
+	}
+
+	.cloud2 {
+		display: none;
+	}
+
+	.section-content p.plain {
+		font-size: 14px;
+	}
+
+	.faq h3 {
+		cursor: pointer;
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 479px) {
+	h3 {
+		font-size: 20px;
+	}
+
+	.header img {
+		height: 200px;
+	}
+
+	.title h1 {
+		font-size: 35px;
+	}
+
+	.title h2 {
+		font-size: 16px;
+	}
+}
+
+.navbar-default .navbar-toggle {
+	border-color: transparent;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: transparent;
+	}
+
+	.icon-bar {
+		background-color: $hack-green;
+  }
+}
+
+.navbar {
+	background-color: transparent;
+	border: 0;
+	padding: 10px 0;
+	-moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+	-webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+	transition: background .5s ease-in-out,padding .5s ease-in-out;
+}
+
+.navbar-default .navbar-nav>li>a {
+	border-bottom: 0 solid transparent;
+	color: $hack-green;
+	font-size: 18px;
+  -webkit-transition: border .3s ease-in-out, color .3s ease-in-out, padding .3s ease-in-out;
+	-moz-transition: border .3s ease-in-out, color .3s ease-in-out, padding .3s ease-in-out;
+	transition: border .3s ease-in-out, color .3s ease-in-out, padding .3s ease-in-out;
+	padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+ul.nav a {
+  box-sizing: border-box;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:active,
+ul.nav a.active:hover {
+	background-color: transparent;
+	border-color: $desert-brown;
+	color: $desert-brown;
+}
+
+ul.nav a.active {
+	border-bottom: 5px solid $desert-brown;
+	color: $desert-brown;
+	padding-bottom: 15px !important;
+}
+
+.top-nav-collapse {
+	background-color: $off-white;
+	border: 0;
+	padding: 0;
+}
+
+.navbar-brand {
+	font-family: "Axis", sans-serif;
+	font-size: 24px;
+	height: 60px;
+	padding: 20px 15px;
+}
+
+
+.header {
+	text-align: center;
+}
+
+.title {
+	h1 {
+		font-family: "Axis", sans-serif;
+		font-size: 60px;
+	}
+
+	h2 {
+		color: $color-1;
+		font-family: "Moderne Sans", sans-serif;
+	}
+}
+
+.nav-item {
+	font-family: "Moderne Sans", sans-serif;
+}
+
+.mobile-nav {
+	background-color: $off-white !important;
+
+	.navbar-nav {
+		float: none;
+	}
+}
+
+.navbar-default .navbar-collapse {
+	margin: 0;
+	width: 100%;
+}
+
+body {
+	background-attachment: fixed;
+	background-image: url('../assets/bg-noclouds.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "Raleway", sans-serif;
+	text-align: center;
+}
+
+.apply {
+	height: 0;
+	-moz-transition: height 1.5s ease;
+	-ms-transition: height 1.5s ease;
+	-webkit-transition: height 1.5s ease;
+	transition: height 1.5s ease;
+}
+
+.navbar-nav {
+	float: right;
+	margin-right: 80px;
+}
+
+.live-nav .navbar-nav {
+	margin-right: 0px;
+}
+
+@media (max-width: 1000px) {
+	.navbar-nav {
+		margin-right: 0;
+	}
+
+	.cloud4 {
+		display: none;
+	}
+}
+
+a.dh-button:link {
+	color: white;
+	text-decoration: none;
+}
+
+.dh-button {
+	background-color: $hack-green;
+	border: 0;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	box-sizing: border-box;
+	color: $off-white;
+	display: inline-block;
+	font-size: 19px;
+	height: 48px;
+	letter-spacing: .03em;
+	line-height: 48px;
+	margin: 10px 15px 0 0;
+	outline: 0;
+	transition: all .23s ease-in-out 0s;
+	width: 192px;
+}
+
+.dh-button:hover {
+	background-color: $desert-brown;
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
+#mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
+#mc_embed_signup #mce-error-response {display:none;}
+#mc_embed_signup #mce-success-response {color:#529214; display:none;}
+#mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
+
+//its bad habit to use id's in css, shud we give them all an
+//identical class name? or is that excessive idk idk
+//lets not worry about good practice for now :^) heh we can clean it up later
+
+.home {
+	min-height: 100vh;
+	position: relative;
+}
+
+.home .header {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.section-content {
+	background-color: $off-white; /*cream color*/
+	padding-top: 20px;
+}
+
+.section-header {
+	width: 100%;
+	text-align: left;
+
+	h1 {
+		position: relative;
+		top: 40px;
+		left: -30px;
+		color: $off-white;
+		display: inline-block;
+		padding: 7px 20px 0;
+	}
+}
+
+@media(max-width: 850px) {
+	.faq .section-header h1 {
+		left: 4%;
+	}
+
+	.cloud5 {
+		display: none;
+	}
+}
+
+@media (max-width: 580px) {
+	.section-header h1 {
+		font-size: 24px;
+	}
+
+	.faq .section-header h1 {
+		width: 250px;
+	}
+
+	.faq {
+		padding-top: 80px;
+	}
+}
+
+.about {
+	box-sizing: content-box;
+	height: max-content;
+	padding-bottom: 60px;
+}
+
+.about p.plain {
+	text-align: justify;
+}
+
+.about-header {
+	background-color: rgb(250, 210, 120);
+}
+
+.schedule .section-content h1 {
+  font-size: 24px;
+}
+
+.schedule h2 {
+	font-size: 18px;
+}
+
+.schedule h2 span {
+	float: right;
+}
+
+.schedule-header {
+	background-color: rgb(99, 169, 179);
+}
+
+.faq-header {
+	background-color: $flor-red;
+}
+
+//faq grid
+.faq .row {
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.faq-col {
+	float: left;
+	text-align: left;
+	width: 33.333%;
+
+	div {
+		margin: 15px;
+		padding: 10px;
+	}
+
+	h3 {
+		margin: 0 0 15px;
+		padding: 0;
+	}
+
+	p {
+		text-align: justify;
+	}
+}
+
+.schedule .row {
+	margin: 0 auto;
+	max-width: 90%;
+}
+
+.sched-col {
+	float: left;
+	padding: 0 40px 20px;
+	text-align: left;
+	width: 50%;
+}
+
+span.plus {
+	display: none;
+	float: right;
+	font-size: 35px;
+	line-height: 15px;
+	transition: all .3s linear;
+}
+
+.open {
+	display: inline-block;
+}
+
+.rotate {
+	-moz-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	transform:rotate(45deg);
+}
+
+@media(max-width: 991px) {
+	.faq-col p {
+		text-align: left;
+	}
+}
+
+@media(max-width: 767px) {
+	.faq-col {
+		width: 100%;
+	}
+
+	.sched-col {
+		padding: 0 20px 20px;
+		width: 100%;
+	}
+
+
+	.schedule h2 {
+		font-size: 14px;
+	}
+
+	.faq-col div {
+		margin: 0 15px;
+		padding: 5px 10px;
+	}
+
+	.faq-col h3 {
+		border-bottom: 1px solid #ddd;
+		padding: 0 0 15px;
+	}
+
+	span.plus {
+		display: inline;
+	}
+}
+
+.sponsors {
+	padding-bottom: 200px;
+
+	.section-content {
+		padding-bottom: 5px;
+		padding-top: 30px;
+	}
+}
+
+.godaddy {
+	padding-bottom: 10px;
+}
+
+.sponsors-header {
+	background-color: $hack-green;
+}
+
+.sponsor-row {
+	padding: 10px;
+	text-align: center;
+}
+
+img.logo {
+	margin-top: 30px;
+}
+
+
+.diamond .logo {
+	max-height: 150px;
+	max-width: 500px;
+}
+
+.turquoise .logo {
+	max-height: 120px;
+	max-width: 200px;
+}
+
+.pyrite .logo {
+	max-height: 60px;
+	max-width: 180px;
+}
+
+.clay .logo {
+	max-height: 60px;
+	max-width: 180px;
+}
+
+.partners {
+	color: $hack-green;
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: 40px;
+}
+
+
+@media(max-width: 776px) {
+	.diamond .logo {
+		max-height: 150px;
+		max-width: 400px;
+	}
+
+	.turquoise .logo {
+		max-height: 100px;
+		max-width: 180px;
+	}
+
+	.pyrite .logo {
+		max-height: 60px;
+		max-width: 180px;
+	}
+
+	.clay .logo {
+		max-height: 60px;
+		max-width: 180px;
+	}
+
+	.partners {
+		font-size: 36px;
+	}
+}
+
+@media(max-width: 580px) {
+	.diamond .logo {
+		max-height: 100px;
+		max-width: 230px;
+	}
+
+	.turquoise .logo {
+		max-height: 70px;
+		max-width: 130px;
+	}
+
+	.pyrite .logo {
+		max-height: 40px;
+		max-width: 100px;
+	}
+
+	.clay .logo {
+		max-height: 40px;
+		max-width: 100px;
+	}
+
+	.partners {
+		font-size: 30px;
+		margin-bottom: 0;
+	}
+}
+
+footer {
+	background-color: $desert-brown;
+	color: $off-white;
+	font-size: 16px;
+	height: 300px;
+	z-index: 2;
+}
+
+.footer {
+	padding-top: 120px;
+}
+
+.social {
+	padding-bottom: 20px;
+
+	a i {
+		color: $off-white;
+		font-size: 60px;
+		margin: 10px;
+	}
+}
+
+.content-cactus {
+	float: right;
+}
+
+.sponsor-email {
+	padding-bottom: 0;
+	padding-top: 20px;
+}
+
+/*misc live site stuff*/
+
+.twitter {
+	overflow: auto;
+}
+
+body.live {
+	background-color: $off-white;
+	background-image: none;
+}
+
+.live {
+	/*styling for live navbar*/
+	.navbar.live-nav {
+		background-color: $off-white;
+		border: 0;
+		padding: 0;
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	}
+
+	section {
+		padding-top: 0px;
+	}
+	.twitter,
+	.schedule-table {
+		border: 1px solid $desert-brown;
+	}
+	table {
+		width: 100%;
+		text-align: left;
+	}
+	th, td {
+		padding: 6px 12px;
+	}
+	.day th {
+		background-color: $dark-yellow;
+	}
+	.table-header {
+		background-color: $desert-brown;
+		color: #fff;
+	}
+	.schedule-table {
+		overflow: auto;
+	}
+
+	footer {
+		height: 100%;
+		margin-top: 35px;
+	}
+	.social a i {
+		font-size: 2em;
+	}
+	.footer {
+		padding-top: 20px;
+	}
+	//faq grid
+	.prize-col .row {
+		margin: 0 auto;
+		max-width: 100%;
+	}
+
+	.prize-col {
+		float: left;
+		text-align: left;
+		width: 33.333%;
+
+		div {
+			margin: 25px 15px;
+			padding: 20px 15px;
+			background-color: $off-white;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.12);
+		}
+
+		h3 {
+			margin: 0 0 15px;
+			font-weight: 500;
+		}
+
+		.win {
+			color: $desert-brown;
+		}
+	}
+
+}

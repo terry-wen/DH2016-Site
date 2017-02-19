@@ -1,4 +1,4 @@
-/* compiled by scssphp v0.6.6 on Sun, 19 Feb 2017 09:29:47 +0100 (0.5582s) */
+/* compiled by scssphp v0.6.6 on Sun, 19 Feb 2017 23:46:12 +0100 (0.6559s) */
 
 @font-face {
   font-family: 'Axis';
@@ -251,9 +251,13 @@ ul.nav a.active {
   font-family: "Moderne Sans", sans-serif; }
 
 .mobile-nav {
-  background-color: #faf8f3 !important; }
-  .mobile-nav .navbar-nav {
-    float: none; }
+  background-color: #faf8f3 !important;
+  transition: float 0.5s ease; }
+
+@media (max-width: 768px) {
+  /*get rid of weird float flicker when collapsing mobile nav*/
+    .navbar-nav {
+      float: none !important; } }
 
 .navbar-default .navbar-collapse {
   margin: 0;
@@ -593,7 +597,8 @@ footer {
   padding-top: 20px; }
 /*misc live site stuff*/
 .twitter {
-  overflow: auto; }
+  overflow: auto;
+  margin-bottom: 10px; }
 
 body.live {
   background-color: #faf8f3;
@@ -613,8 +618,9 @@ body.live {
   .live table {
     width: 100%;
     text-align: left; }
-  .live th, .live td {
-    padding: 6px 12px; }
+  .live .schedule-table th, .live td {
+    padding: 6px 12px;
+    font-size: 1.2em; }
   .live .day th {
     background-color: #f9d178; }
   .live .table-header {
@@ -630,11 +636,38 @@ body.live {
     transition: all 0.5s ease; }
   .live footer {
     height: 100%;
-    margin-top: 35px; }
+    margin-top: 35px;
+    padding-top: 40px;
+    padding-bottom: 20px; }
   .live .social a i {
     font-size: 2em; }
   .live .footer {
-    padding-top: 20px; }
+    padding-top: 60px; }
+  .live .resource-box {
+    border: 1px solid #64aab4;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+    background-color: #fff; }
+  .live .resource-box:hover {
+    border: 1px solid #ee375b; }
+  .live .resource-box .fa {
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%, -50%); }
+  .live .resource-box p {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  .live .resource-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: #64aab4; }
+  .live .resource-link:hover {
+    color: #ee375b; }
   .live .prize-col .row {
     margin: 0 auto;
     max-width: 100%; }
@@ -644,11 +677,13 @@ body.live {
     width: 33.333%; }
     .live .prize-col div {
       margin: 25px 15px;
-      padding: 20px 15px;
+      padding: 25px 20px;
       background-color: #faf8f3;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.12); }
     .live .prize-col h3 {
       margin: 0 0 15px;
       font-weight: 500; }
+    .live .prize-col p {
+      font-size: 16px; }
     .live .prize-col .win {
       color: #994033; }

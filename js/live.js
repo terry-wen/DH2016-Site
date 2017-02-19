@@ -8,16 +8,16 @@ function checkTime() {
 
   //if(now.getMonth() == 1 && now.getFullYear() == 2017) {
     $('.schedule tr').each(function() {
-      var whatday = $(this).parent('.whatday').attr('value');
+      var date = $(this).parent('.date').attr('value');
 
       if($(this).hasClass('time')) {
         console.log('timtime: ' + timstamp);
         var eTime = parseFloat($(this).attr('value'));
 
         //current event is going on
-        if(whatday == now.getDate() && (eTime - 25) < timstamp && (eTime + 100) > timstamp) {
+        if(date == now.getDate() && (eTime - 25) < timstamp && (eTime + 100) > timstamp) {
           $(this).addClass('current');
-        } else if(whatday < now.getDate() || (whatday == now.getDate() && (eTime + 100) < timstamp)) {
+        } else if(date < now.getDate() || (date == now.getDate() && (eTime + 100) < timstamp)) {
           $(this).removeClass('current');
           $(this).addClass('past');
         }

@@ -272,9 +272,13 @@ ul.nav a.active {
 
 .mobile-nav {
 	background-color: $off-white !important;
+	transition: float 0.5s ease;
+}
 
+@media (max-width: 768px) {
+	/*get rid of weird float flicker when collapsing mobile nav*/
 	.navbar-nav {
-		float: none;
+		float: none!important;
 	}
 }
 
@@ -684,6 +688,7 @@ footer {
 
 .twitter {
 	overflow: auto;
+	margin-bottom: 10px;
 }
 
 body.live {
@@ -712,8 +717,10 @@ body.live {
 		width: 100%;
 		text-align: left;
 	}
-	th, td {
+
+	.schedule-table th, td {
 		padding: 6px 12px;
+		font-size: 1.2em;
 	}
 	.day th {
 		background-color: $dark-yellow;
@@ -738,12 +745,52 @@ body.live {
 	footer {
 		height: 100%;
 		margin-top: 35px;
+		padding-top: 40px;
+		padding-bottom: 20px;
 	}
 	.social a i {
 		font-size: 2em;
 	}
 	.footer {
-		padding-top: 20px;
+		padding-top: 60px;
+	}
+
+	//resources
+	.resource-box {
+		border: 1px solid $color-1;
+		margin: 10px;
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+		position: relative;
+		background-color: #fff;
+	}
+
+	.resource-box:hover {
+		border: 1px solid $flor-red;
+	}
+
+	.resource-box .fa {
+		position:absolute;
+		top: 40%;
+		transform: translate(-50%, -50%);
+	}
+
+	.resource-box p {
+		position:absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+
+	.resource-link {
+		cursor: pointer;
+		text-decoration: none;
+		color: $color-1;
+	}
+
+	.resource-link:hover {
+		color: $flor-red;
 	}
 
 	//faq grid
@@ -759,7 +806,7 @@ body.live {
 
 		div {
 			margin: 25px 15px;
-			padding: 20px 15px;
+			padding: 25px 20px;
 			background-color: $off-white;
 			box-shadow: 0 2px 6px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.12);
 		}
@@ -767,6 +814,10 @@ body.live {
 		h3 {
 			margin: 0 0 15px;
 			font-weight: 500;
+		}
+
+		p {
+			font-size: 16px;
 		}
 
 		.win {

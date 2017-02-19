@@ -1,4 +1,4 @@
-/* compiled by scssphp v0.6.6 on Thu, 16 Feb 2017 08:50:49 +0100 (0.6653s) */
+/* compiled by scssphp v0.6.6 on Sun, 19 Feb 2017 09:29:47 +0100 (0.5582s) */
 
 @font-face {
   font-family: 'Axis';
@@ -622,6 +622,12 @@ body.live {
     color: #fff; }
   .live .schedule-table {
     overflow: auto; }
+  .live .schedule .current {
+    background-color: #99cd76;
+    transition: all 0.5s ease; }
+  .live .schedule .past {
+    background-color: #aaa;
+    transition: all 0.5s ease; }
   .live footer {
     height: 100%;
     margin-top: 35px; }

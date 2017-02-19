@@ -691,6 +691,7 @@ body.live {
 	background-image: none;
 }
 
+
 .live {
 	/*styling for live navbar*/
 	.navbar.live-nav {
@@ -724,6 +725,15 @@ body.live {
 	.schedule-table {
 		overflow: auto;
 	}
+	.schedule .current {
+		background-color: $hack-green;
+		transition: all 0.5s ease;
+	}
+
+	.schedule .past {
+		background-color: #aaa;
+		transition: all 0.5s ease;
+	}
 
 	footer {
 		height: 100%;
@@ -735,6 +745,7 @@ body.live {
 	.footer {
 		padding-top: 20px;
 	}
+
 	//faq grid
 	.prize-col .row {
 		margin: 0 auto;
@@ -762,5 +773,4 @@ body.live {
 			color: $desert-brown;
 		}
 	}
-
 }

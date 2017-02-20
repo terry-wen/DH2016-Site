@@ -2,8 +2,8 @@ $desert-brown: #994033;
 $hack-green: #99CD76;
 $off-white: #FAF8F3;
 $flor-red: rgb(238, 55, 91);
-$color-0: rgb(112, 190, 113);
-$color-1: rgb(100, 170, 180);
+$cloud-blue: rgb(99, 169, 179);
+$dark-green: rgb(112, 190, 113);
 
 @mixin font-face($font-family, $file-path, $font-weight) {
 	@font-face {
@@ -425,19 +425,20 @@ a.dh-button:link {
 }
 
 .schedule .section-content h1 {
-  font-size: 24px;
+	font-size: 24px;
 }
 
 .schedule h2 {
-	font-size: 18px;
-}
+	font-size: 16px;
 
-.schedule h2 span {
-	float: right;
+	span {
+		float: right;
+		color: black;
+	}
 }
 
 .schedule-header {
-	background-color: rgb(99, 169, 179);
+	background-color: $cloud-blue;
 }
 
 .faq-header {
@@ -565,22 +566,27 @@ img.logo {
 
 .diamond .logo {
 	max-height: 150px;
-	max-width: 500px;
+	max-width: 600px;
 }
 
 .turquoise .logo {
-	max-height: 120px;
+	max-height: 130px;
 	max-width: 200px;
+}
+
+.quartz .logo {
+	max-height: 90px;
+	max-width: 180px;
 }
 
 .pyrite .logo {
 	max-height: 60px;
-	max-width: 180px;
+	max-width: 160px;
 }
 
 .clay .logo {
 	max-height: 60px;
-	max-width: 180px;
+	max-width: 160px;
 }
 
 .partners {
@@ -602,14 +608,19 @@ img.logo {
 		max-width: 180px;
 	}
 
+	.quartz .logo {
+		max-height: 80px;
+		max-width: 160px;
+	}
+
 	.pyrite .logo {
 		max-height: 60px;
-		max-width: 180px;
+		max-width: 140px;
 	}
 
 	.clay .logo {
 		max-height: 60px;
-		max-width: 180px;
+		max-width: 140px;
 	}
 
 	.partners {
@@ -626,6 +637,11 @@ img.logo {
 	.turquoise .logo {
 		max-height: 70px;
 		max-width: 130px;
+	}
+
+	.quartz .logo {
+		max-height: 60px;
+		max-width: 120px;
 	}
 
 	.pyrite .logo {

@@ -698,12 +698,30 @@ body.live {
 
 
 .live {
+	.submission {
+		background-color: $hack-green;
+		transition: background-color 0.3s ease;
+	}
+	.submission:hover {
+		background-color: $desert-brown;
+	}
+
+	.submission a.nav-link {
+		color: $off-white!important;
+	}
+
+
+	.prizes h1 {
+		margin-left: 20px;
+	}
+
 	/*styling for live navbar*/
 	.navbar.live-nav {
 		background-color: $off-white;
 		border: 0;
 		padding: 0;
 		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+		border-radius: 0;
 	}
 
 	section {
@@ -758,16 +776,19 @@ body.live {
 	//resources
 	.resource-box {
 		border: 1px solid $color-1;
+		color: $color-1;
 		margin: 10px;
 		width: 100px;
 		height: 100px;
 		display: inline-block;
 		position: relative;
 		background-color: #fff;
+		transition: all 0.3s ease;
 	}
 
 	.resource-box:hover {
 		border: 1px solid $flor-red;
+		color: $flor-red;
 	}
 
 	.resource-box .fa {
@@ -784,19 +805,29 @@ body.live {
 	}
 
 	.resource-link {
-		cursor: pointer;
 		text-decoration: none;
-		color: $color-1;
-	}
-
-	.resource-link:hover {
-		color: $flor-red;
 	}
 
 	//faq grid
 	.prize-col .row {
 		margin: 0 auto;
 		max-width: 100%;
+	}
+
+	.prize-col.general {
+		height: 225px;
+	}
+
+	@media (max-width: 1200px) {
+		.prize-col.general {
+			height: 250px
+		}
+	}
+
+	@media (max-width: 992px) {
+		.prize-col.general {
+			height: 300px;
+		}
 	}
 
 	.prize-col {
@@ -822,6 +853,35 @@ body.live {
 
 		.win {
 			color: $desert-brown;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.prize-col.general {
+			height: auto;
+		}
+
+		.prize-col {
+			margin-left: 5%;
+			width: 90%;
+		}
+
+		.prize-col div {
+			margin: 15px 15px!important;
+		}
+
+		/*cancel out the extra margin between prizecol*/
+		.prize-col {
+			margin-top: -7px;
+			margin-bottom: -8px;
+		}
+	}
+
+	@media (max-width: 576px) {
+		.prize-col {
+			margin-left: 10px;
+			margin-right: 10px;
+			width: 95%;
 		}
 	}
 }

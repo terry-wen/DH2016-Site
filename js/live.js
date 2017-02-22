@@ -1,7 +1,7 @@
 /*schedule*/
 
 function checkTime() {
-  var now = new Date(2017, 01, 25, 12, 50, 00);
+  var now = new Date(2017, 01, 25, 12, 30, 00);
   var hour = now.getHours();
   var date = now.getDate();
   var timstamp = now.getHours()*100 + (now.getMinutes() * 5/3);
@@ -15,7 +15,7 @@ function checkTime() {
         var eTime = parseFloat($(this).attr('value'));
 
         //current event is going on
-        if(date == now.getDate() && (eTime - 25) < timstamp && (eTime + 100) > timstamp) {
+        if(date == now.getDate() && (eTime - 15) < timstamp && (eTime + 100) > timstamp) {
           $(this).addClass('current');
         } else if(date < now.getDate() || (date == now.getDate() && (eTime + 100) < timstamp)) {
           $(this).removeClass('current');
@@ -27,8 +27,24 @@ function checkTime() {
   //} //end of check month, year
 }
 
+/*live site configurations*/
+function resizeMe() {
+  if($(window).width()>=768){
+    $('.twitter').css('height', $(window).height()- $('.twitter').offset().top-35);
+    $('.schedule-table').css('height',$(window).height()- $('.schedule-table').offset().top-35);
+  }
+}
+
 $(document).ready(function() {
 
+  resizeMe();
   checkTime();
-  setInterval(checkTime, 1000 * 60 * 30); //every half hour
+  setInterval(checkTime, 1000 * 60); //every minute
+
+  //scroll to current event
+  $('.schedule-table').scrollTop($('.current').position().top);
 });
+
+$( window ).resize(function() {
+  resizeMe();
+})

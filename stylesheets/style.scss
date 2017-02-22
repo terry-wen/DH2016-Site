@@ -710,6 +710,22 @@ body.live {
 		color: $off-white!important;
 	}
 
+	.navbar-btn {
+		font-size: 17px;
+		font-family: "Moderne Sans", sans-serif;
+		color: $off-white;
+		background-color: $hack-green;
+    margin-left: 6px;
+    padding: 9px 16px 5px 16px;
+		transition: all .23s ease-in-out 0s;
+		border: none;
+		outline: none;
+	}
+
+	.navbar-btn:hover {
+		background-color: $desert-brown;
+	}
+
 
 	.prizes h1 {
 		margin-left: 20px;
@@ -730,13 +746,15 @@ body.live {
 	.twitter,
 	.schedule-table {
 		border: 1px solid $desert-brown;
+		margin-bottom: 15px;
 	}
 	table {
 		width: 100%;
 		text-align: left;
 	}
 
-	.schedule-table th, td {
+	.schedule-table th, td,
+	table th, .live td {
 		padding: 6px 12px;
 		font-size: 1.2em;
 	}
@@ -749,6 +767,7 @@ body.live {
 	}
 	.schedule-table {
 		overflow: auto;
+		position: relative;
 	}
 	.schedule .current {
 		background-color: $hack-green;
@@ -783,7 +802,7 @@ body.live {
 		display: inline-block;
 		position: relative;
 		background-color: #fff;
-		transition: all 0.3s ease;
+		transition: all .23s ease-in-out 0s;
 	}
 
 	.resource-box:hover {
@@ -828,6 +847,19 @@ body.live {
 		.prize-col.general {
 			height: 300px;
 		}
+	}
+
+	.resources-faq {
+		font-size: 2.5em;
+		margin-bottom: 10px;
+		padding: 17px 20px 7px 20px;
+		background-color: $flor-red;
+		color: #fff;
+		display: inline-block;
+	}
+
+	.faq-container {
+		text-align: left;
 	}
 
 	.prize-col {
@@ -882,6 +914,51 @@ body.live {
 			margin-left: 10px;
 			margin-right: 10px;
 			width: 95%;
+		}
+	}
+
+	//rip
+	.time-header {
+		width: 113px;
+	}
+	.event-header {
+		width: 357px;
+	}
+	.loc-header {
+		width: 146px;
+	}
+
+	@media (max-width: 500px) {
+		.time-header {
+			width: 22%;
+		}
+		.event-header {
+			width: 50%;
+		}
+		.loc-header {
+			width: 43%;
+		}
+	}
+	@media (max-width: 450px) {
+		.time-header {
+			width: 25%;
+		}
+		.event-header {
+			width: 44%;
+		}
+		.loc-header {
+			width: 43%;
+		}
+	}
+	@media (max-width: 400px) {
+		.time-header {
+			width: 28%;
+		}
+		.event-header {
+			width: 36%;
+		}
+		.loc-header {
+			width: 45%;
 		}
 	}
 }

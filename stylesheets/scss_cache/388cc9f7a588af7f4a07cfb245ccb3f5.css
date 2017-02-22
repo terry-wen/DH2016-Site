@@ -1,4 +1,4 @@
-/* compiled by scssphp v0.6.6 on Tue, 21 Feb 2017 07:23:30 +0100 (0.7258s) */
+/* compiled by scssphp v0.6.6 on Wed, 22 Feb 2017 06:52:21 +0100 (0.8403s) */
 
 @font-face {
   font-family: 'Axis';
@@ -613,6 +613,18 @@ body.live {
     background-color: #994033; }
   .live .submission a.nav-link {
     color: #faf8f3 !important; }
+  .live .navbar-btn {
+    font-size: 17px;
+    font-family: "Moderne Sans", sans-serif;
+    color: #faf8f3;
+    background-color: #99cd76;
+    margin-left: 6px;
+    padding: 9px 16px 5px 16px;
+    transition: all 0.23s ease-in-out 0s;
+    border: none;
+    outline: none; }
+  .live .navbar-btn:hover {
+    background-color: #994033; }
   .live .prizes h1 {
     margin-left: 20px; }
   .live .navbar.live-nav {
@@ -624,11 +636,12 @@ body.live {
   .live section {
     padding-top: 0px; }
   .live .twitter, .live .schedule-table {
-    border: 1px solid #994033; }
+    border: 1px solid #994033;
+    margin-bottom: 15px; }
   .live table {
     width: 100%;
     text-align: left; }
-  .live .schedule-table th, .live td {
+  .live .schedule-table th, .live td, .live table th, .live .live td {
     padding: 6px 12px;
     font-size: 1.2em; }
   .live .day th {
@@ -637,7 +650,8 @@ body.live {
     background-color: #994033;
     color: #fff; }
   .live .schedule-table {
-    overflow: auto; }
+    overflow: auto;
+    position: relative; }
   .live .schedule .current {
     background-color: #99cd76;
     transition: all 0.5s ease; }
@@ -662,7 +676,7 @@ body.live {
     display: inline-block;
     position: relative;
     background-color: #fff;
-    transition: all 0.3s ease; }
+    transition: all 0.23s ease-in-out 0s; }
   .live .resource-box:hover {
     border: 1px solid #ee375b;
     color: #ee375b; }
@@ -688,6 +702,15 @@ body.live {
   @media (max-width: 992px) {
   .live .prize-col.general {
     height: 300px; } }
+  .live .resources-faq {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    padding: 17px 20px 7px 20px;
+    background-color: #ee375b;
+    color: #fff;
+    display: inline-block; }
+  .live .faq-container {
+    text-align: left; }
   .live .prize-col {
     float: left;
     text-align: left;
@@ -725,3 +748,30 @@ body.live {
     margin-left: 10px;
     margin-right: 10px;
     width: 95%; } }
+  .live .time-header {
+    width: 113px; }
+  .live .event-header {
+    width: 357px; }
+  .live .loc-header {
+    width: 146px; }
+  @media (max-width: 500px) {
+  .live .time-header {
+    width: 22%; }
+  .live .event-header {
+    width: 50%; }
+  .live .loc-header {
+    width: 43%; } }
+  @media (max-width: 450px) {
+  .live .time-header {
+    width: 25%; }
+  .live .event-header {
+    width: 44%; }
+  .live .loc-header {
+    width: 43%; } }
+  @media (max-width: 400px) {
+  .live .time-header {
+    width: 28%; }
+  .live .event-header {
+    width: 36%; }
+  .live .loc-header {
+    width: 45%; } }

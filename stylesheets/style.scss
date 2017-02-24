@@ -705,7 +705,6 @@ body.live {
 	.submission:hover {
 		background-color: $desert-brown;
 	}
-
 	.submission a.nav-link {
 		color: $off-white!important;
 	}
@@ -823,6 +822,42 @@ body.live {
 		transform: translate(-50%, 0);
 	}
 
+
+	.rsrc-holder {
+		width: 100%;
+	}
+
+	.rsrc-inner {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.rsrc-inner a {
+		text-align: left;
+		text-decoration: none;
+		color: $color-1;
+	}
+
+	.rsrc-item {
+		height: 100px;
+		border: 1px solid $color-1;
+		background-color: #fff;
+		margin: 10px 0;
+		padding: 0 20px;
+		transition: all .23s ease-in-out 0s;
+	}
+
+	.rsrc-item:hover {
+		color: $flor-red;
+		border: 1px solid $flor-red;
+	}
+
+	.mapmap {
+		max-width: 100%;
+		outline: none;
+		border: 1px solid #aaa;
+	}
+
 	.resource-link {
 		text-decoration: none;
 	}
@@ -835,6 +870,14 @@ body.live {
 
 	.prize-col.general {
 		height: 225px;
+	}
+
+
+	.prizes h1 {
+		color: $off-white;
+		font-size: 38px;
+		margin-top: 35px;
+		margin-bottom: 0;
 	}
 
 	@media (max-width: 1200px) {
@@ -872,6 +915,11 @@ body.live {
 			padding: 25px 20px;
 			background-color: $off-white;
 			box-shadow: 0 2px 6px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.12);
+			transition: box-shadow 0.3s ease;
+		}
+
+		div:hover {
+			box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 		}
 
 		h3 {

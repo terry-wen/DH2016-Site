@@ -30,8 +30,8 @@ function checkTime() {
 /*live site configurations*/
 function resizeMe() {
   if($(window).width()>=768){
-    $('.twitter').css('height', $(window).height()- $('.twitter').offset().top-35);
-    $('.schedule-table').css('height',$(window).height()- $('.schedule-table').offset().top-35);
+    $('.twitter').css('height', $(window).height()- $('.twitter').offset().top-35 - 150);
+    $('.schedule-table').css('height',$(window).height()- $('.schedule-table').offset().top-35 - 150);
   }
 }
 

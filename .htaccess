@@ -1,0 +1,5 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteRule ^live$ http://deserthacks.org/live.html/ [R=301,L]
+RewriteRule ^live//prizes$ http://deserthacks.org/prizes.html/ [R=301,L]
+RewriteRule ^live//resources$ http://deserthacks.org/resources.html/ [R=301,L]

@@ -1,4 +1,4 @@
-/* compiled by scssphp v0.6.6 on Sat, 25 Feb 2017 10:16:17 +0100 (0.9706s) */
+/* compiled by scssphp v0.6.6 on Sat, 25 Feb 2017 16:58:31 +0100 (0.922s) */
 
 @font-face {
   font-family: 'Axis';
@@ -244,7 +244,7 @@ ul.nav a.active {
   font-family: "Axis", sans-serif;
   font-size: 60px; }
   .title h2 {
-    color: #64aab4;
+    color: #63a9b3;
     font-family: "Moderne Sans", sans-serif; }
 
 .nav-item {
@@ -411,10 +411,10 @@ a.dh-button:link {
   font-size: 24px; }
 
 .schedule h2 {
-  font-size: 18px; }
-
-.schedule h2 span {
-  float: right; }
+  font-size: 16px; }
+  .schedule h2 span {
+    float: right;
+    color: black; }
 
 .schedule-header {
   background-color: #63a9b3; }
@@ -511,19 +511,23 @@ img.logo {
 
 .diamond .logo {
   max-height: 150px;
-  max-width: 500px; }
+  max-width: 600px; }
 
 .turquoise .logo {
-  max-height: 120px;
+  max-height: 130px;
   max-width: 200px; }
+
+.quartz .logo {
+  max-height: 90px;
+  max-width: 180px; }
 
 .pyrite .logo {
   max-height: 60px;
-  max-width: 180px; }
+  max-width: 160px; }
 
 .clay .logo {
   max-height: 60px;
-  max-width: 180px; }
+  max-width: 160px; }
 
 .partners {
   color: #99cd76;
@@ -540,13 +544,17 @@ img.logo {
     max-height: 100px;
     max-width: 180px; }
 
+  .quartz .logo {
+    max-height: 80px;
+    max-width: 160px; }
+
   .pyrite .logo {
     max-height: 60px;
-    max-width: 180px; }
+    max-width: 140px; }
 
   .clay .logo {
     max-height: 60px;
-    max-width: 180px; }
+    max-width: 140px; }
 
   .partners {
     font-size: 36px; } }
@@ -559,6 +567,10 @@ img.logo {
   .turquoise .logo {
     max-height: 70px;
     max-width: 130px; }
+
+  .quartz .logo {
+    max-height: 60px;
+    max-width: 120px; }
 
   .pyrite .logo {
     max-height: 40px;

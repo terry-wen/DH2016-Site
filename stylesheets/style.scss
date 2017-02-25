@@ -4,6 +4,9 @@ $off-white: #FAF8F3;
 $flor-red: rgb(238, 55, 91);
 $cloud-blue: rgb(99, 169, 179);
 $dark-green: rgb(112, 190, 113);
+$color-0: rgb(112, 190, 113);
+$color-1: rgb(100, 170, 180);
+$dark-yellow: #F9D178;
 
 @mixin font-face($font-family, $file-path, $font-weight) {
 	@font-face {
@@ -182,7 +185,6 @@ p {
 	}
 }
 
-
 .navbar-default .navbar-toggle {
 	border-color: transparent;
 
@@ -249,6 +251,7 @@ ul.nav a.active {
 	padding: 20px 15px;
 }
 
+
 .header {
 	text-align: center;
 }
@@ -271,9 +274,13 @@ ul.nav a.active {
 
 .mobile-nav {
 	background-color: $off-white !important;
+	transition: float 0.5s ease;
+}
 
+@media (max-width: 768px) {
+	/*get rid of weird float flicker when collapsing mobile nav*/
 	.navbar-nav {
-		float: none;
+		float: none!important;
 	}
 }
 
@@ -302,6 +309,10 @@ body {
 .navbar-nav {
 	float: right;
 	margin-right: 80px;
+}
+
+.live-nav .navbar-nav {
+	margin-right: 0px;
 }
 
 @media (max-width: 1000px) {
@@ -689,4 +700,346 @@ footer {
 .sponsor-email {
 	padding-bottom: 0;
 	padding-top: 20px;
+}
+
+/*misc live site stuff*/
+
+.twitter {
+	overflow: auto;
+	margin-bottom: 10px;
+}
+
+body.live {
+	background-color: $off-white;
+	background-image: none;
+}
+
+
+.live {
+	.submission {
+		background-color: $hack-green;
+		transition: background-color 0.3s ease;
+	}
+	.submission:hover {
+		background-color: $desert-brown;
+	}
+	.submission a.nav-link {
+		color: $off-white!important;
+	}
+
+	.navbar-btn {
+		font-size: 17px;
+		font-family: "Moderne Sans", sans-serif;
+		color: $off-white;
+		background-color: $hack-green;
+    margin-left: 6px;
+    padding: 9px 16px 5px 16px;
+		transition: all .23s ease-in-out 0s;
+		border: none;
+		outline: none;
+	}
+
+	.navbar-btn:hover {
+		background-color: $desert-brown;
+	}
+
+
+	.prizes h1 {
+		margin-left: 20px;
+	}
+
+	/*styling for live navbar*/
+	.navbar.live-nav {
+		background-color: $off-white;
+		border: 0;
+		padding: 0;
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+		border-radius: 0;
+	}
+
+	section {
+		padding-top: 0px;
+	}
+	.twitter,
+	.schedule-table {
+		border: 1px solid $desert-brown;
+		margin-bottom: 15px;
+	}
+
+	table {
+		width: 100%;
+		text-align: left;
+	}
+
+	.schedule-table th, td,
+	table th, .live td {
+		padding: 6px 12px;
+		font-size: 1.2em;
+	}
+	.day th {
+		background-color: $dark-yellow;
+	}
+	.table-header {
+		background-color: $desert-brown;
+		color: #fff;
+	}
+	.schedule-table {
+		overflow: auto;
+		position: relative;
+	}
+	.schedule .current {
+		background-color: $hack-green;
+		transition: all 0.5s ease;
+	}
+
+	.schedule .past {
+		background-color: #aaa;
+		transition: all 0.5s ease;
+	}
+
+	footer {
+		height: 100%;
+		margin-top: 35px;
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+	.social a i {
+		font-size: 2em;
+	}
+	.footer {
+		padding-top: 0px;
+	}
+
+	//resources
+	.resource-box {
+		border: 1px solid $color-1;
+		color: $color-1;
+		margin: 10px;
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+		position: relative;
+		background-color: #fff;
+		transition: all .23s ease-in-out 0s;
+	}
+
+	.resource-box:hover {
+		border: 1px solid $flor-red;
+		color: $flor-red;
+	}
+
+	.resource-box .fa {
+		position:absolute;
+		top: 40%;
+		transform: translate(-50%, -50%);
+	}
+
+	.resource-box p {
+		position:absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+
+
+	.rsrc-holder {
+		width: 100%;
+	}
+
+	.rsrc-inner {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.rsrc-inner a {
+		text-align: left;
+		text-decoration: none;
+		color: $color-1;
+	}
+
+	.rsrc-item {
+		height: 120px;
+		border: 1px solid $color-1;
+		background-color: #fff;
+		margin: 10px 0;
+		padding: 0 20px;
+		transition: all .23s ease-in-out 0s;
+		overflow: auto;
+	}
+
+	.rsrc-item h3 {
+		margin-top: 15px;
+		margin-bottom: 5px;
+	}
+
+	.rsrc-item:hover {
+		color: $flor-red;
+		border: 1px solid $flor-red;
+	}
+
+	.mapmap {
+		max-width: 100%;
+		outline: none;
+		border: 1px solid #aaa;
+	}
+
+	.resource-link {
+		text-decoration: none;
+	}
+
+	//faq grid
+	.prize-col .row {
+		margin: 0 auto;
+		max-width: 100%;
+	}
+
+	.prize-col.general {
+		height: 225px;
+	}
+
+
+	.prizes h1 {
+		color: $off-white;
+		font-size: 38px;
+		margin-top: 35px;
+		margin-bottom: 0;
+	}
+
+	@media (max-width: 1200px) {
+		.prize-col.general {
+			height: 250px
+		}
+	}
+
+	@media (max-width: 992px) {
+		.prize-col.general {
+			height: 300px;
+		}
+	}
+
+	.resources-faq {
+		font-size: 2.5em;
+		margin-bottom: 10px;
+		padding: 17px 20px 7px 20px;
+		background-color: $flor-red;
+		color: #fff;
+		display: inline-block;
+	}
+
+	.rsrc-faq {
+		text-align: left;
+	}
+
+	.rsrc-faq .answer {
+		text-align: justify;
+	}
+
+	.faq-container {
+		text-align: left;
+	}
+
+	.prize-col {
+		float: left;
+		text-align: left;
+		width: 33.333%;
+
+		div {
+			margin: 25px 15px;
+			padding: 25px 20px;
+			background-color: $off-white;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.12);
+			transition: box-shadow 0.3s ease;
+		}
+
+		div:hover {
+			box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+		}
+
+		h3 {
+			margin: 0 0 15px;
+			font-weight: 500;
+		}
+
+		p {
+			font-size: 16px;
+		}
+
+		.win {
+			color: $desert-brown;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.prize-col.general {
+			height: auto;
+		}
+
+		.prize-col {
+			margin-left: 5%;
+			width: 90%;
+		}
+
+		.prize-col div {
+			margin: 15px 15px!important;
+		}
+
+		/*cancel out the extra margin between prizecol*/
+		.prize-col {
+			margin-top: -7px;
+			margin-bottom: -8px;
+		}
+	}
+
+	@media (max-width: 576px) {
+		.prize-col {
+			margin-left: 10px;
+			margin-right: 10px;
+			width: 95%;
+		}
+	}
+
+	//rip
+	.time-header {
+		width: 113px;
+	}
+	.event-header {
+		width: 357px;
+	}
+	.loc-header {
+		width: 146px;
+	}
+
+	@media (max-width: 500px) {
+		.time-header {
+			width: 22%;
+		}
+		.event-header {
+			width: 50%;
+		}
+		.loc-header {
+			width: 43%;
+		}
+	}
+	@media (max-width: 450px) {
+		.time-header {
+			width: 25%;
+		}
+		.event-header {
+			width: 44%;
+		}
+		.loc-header {
+			width: 43%;
+		}
+	}
+	@media (max-width: 400px) {
+		.time-header {
+			width: 28%;
+		}
+		.event-header {
+			width: 36%;
+		}
+		.loc-header {
+			width: 45%;
+		}
+	}
 }

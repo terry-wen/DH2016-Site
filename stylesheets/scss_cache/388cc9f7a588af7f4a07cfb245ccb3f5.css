@@ -1,4 +1,4 @@
-/* compiled by scssphp v0.6.6 on Fri, 24 Feb 2017 08:57:18 +0100 (0.9346s) */
+/* compiled by scssphp v0.6.6 on Sat, 25 Feb 2017 10:16:17 +0100 (0.9706s) */
 
 @font-face {
   font-family: 'Axis';
@@ -666,7 +666,7 @@ body.live {
   .live .social a i {
     font-size: 2em; }
   .live .footer {
-    padding-top: 60px; }
+    padding-top: 0px; }
   .live .resource-box {
     border: 1px solid #64aab4;
     color: #64aab4;
@@ -699,12 +699,16 @@ body.live {
     text-decoration: none;
     color: #64aab4; }
   .live .rsrc-item {
-    height: 100px;
+    height: 120px;
     border: 1px solid #64aab4;
     background-color: #fff;
     margin: 10px 0;
     padding: 0 20px;
-    transition: all 0.23s ease-in-out 0s; }
+    transition: all 0.23s ease-in-out 0s;
+    overflow: auto; }
+  .live .rsrc-item h3 {
+    margin-top: 15px;
+    margin-bottom: 5px; }
   .live .rsrc-item:hover {
     color: #ee375b;
     border: 1px solid #ee375b; }
@@ -737,6 +741,10 @@ body.live {
     background-color: #ee375b;
     color: #fff;
     display: inline-block; }
+  .live .rsrc-faq {
+    text-align: left; }
+  .live .rsrc-faq .answer {
+    text-align: justify; }
   .live .faq-container {
     text-align: left; }
   .live .prize-col {

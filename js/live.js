@@ -1,7 +1,7 @@
 /*schedule*/
 
 function checkTime() {
-  var now = new Date(2017, 01, 25, 12, 30, 00);
+  var now = new Date();
   var hour = now.getHours();
   var date = now.getDate();
   var timstamp = now.getHours()*100 + (now.getMinutes() * 5/3);

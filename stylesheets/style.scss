@@ -747,6 +747,7 @@ body.live {
 		border: 1px solid $desert-brown;
 		margin-bottom: 15px;
 	}
+
 	table {
 		width: 100%;
 		text-align: left;
@@ -788,7 +789,7 @@ body.live {
 		font-size: 2em;
 	}
 	.footer {
-		padding-top: 60px;
+		padding-top: 0px;
 	}
 
 	//resources
@@ -839,12 +840,18 @@ body.live {
 	}
 
 	.rsrc-item {
-		height: 100px;
+		height: 120px;
 		border: 1px solid $color-1;
 		background-color: #fff;
 		margin: 10px 0;
 		padding: 0 20px;
 		transition: all .23s ease-in-out 0s;
+		overflow: auto;
+	}
+
+	.rsrc-item h3 {
+		margin-top: 15px;
+		margin-bottom: 5px;
 	}
 
 	.rsrc-item:hover {
@@ -899,6 +906,14 @@ body.live {
 		background-color: $flor-red;
 		color: #fff;
 		display: inline-block;
+	}
+
+	.rsrc-faq {
+		text-align: left;
+	}
+
+	.rsrc-faq .answer {
+		text-align: justify;
 	}
 
 	.faq-container {

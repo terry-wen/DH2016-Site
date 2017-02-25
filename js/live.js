@@ -15,9 +15,9 @@ function checkTime() {
         var eTime = parseFloat($(this).attr('value'));
 
         //current event is going on
-        if(date == now.getDate() && (eTime - 15) < timstamp && (eTime + 100) > timstamp) {
+        if(date == now.getDate() && (eTime - 15) < timstamp && (eTime + 80) > timstamp) {
           $(this).addClass('current');
-        } else if(date < now.getDate() || (date == now.getDate() && (eTime + 100) < timstamp)) {
+        } else if(date < now.getDate() || (date == now.getDate() && (eTime + 80) < timstamp)) {
           $(this).removeClass('current');
           $(this).addClass('past');
         }
